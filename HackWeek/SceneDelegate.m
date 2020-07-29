@@ -8,7 +8,8 @@
 
 #import "SceneDelegate.h"
 #import "AppDelegate.h"
-
+#import "LoginViewController.h"
+#import "PageTableViewController.h"
 @interface SceneDelegate ()
 
 @end
@@ -17,6 +18,16 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
+    UIWindowScene *mainscene = (UIWindowScene *)scene;
+     _window = [[UIWindow alloc] initWithFrame:mainscene.coordinateSpace.bounds];
+     _window.windowScene = mainscene;
+    LoginViewController *viewcontroller = LoginViewController.new;
+    PageTableViewController *page = PageTableViewController.new;
+    page.tabBarItem.image = [UIImage imageNamed:@"首页"];
+    UITabBarController *controller =  [[UITabBarController alloc]init];
+    [controller addChildViewController:page];
+    _window.rootViewController = controller;
+     [_window makeKeyAndVisible];
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EA1609E00F30D5C91B58E51 /* libPods-HackWeek.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E7958D7D4438D5297D7765 /* libPods-HackWeek.a */; };
 		D5AAF8F724CEAA8000B6AF2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF8F624CEAA8000B6AF2E /* AppDelegate.m */; };
 		D5AAF8FA24CEAA8000B6AF2E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF8F924CEAA8000B6AF2E /* SceneDelegate.m */; };
 		D5AAF8FD24CEAA8000B6AF2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF8FC24CEAA8000B6AF2E /* ViewController.m */; };
@@ -15,9 +16,19 @@
 		D5AAF90524CEAA8300B6AF2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5AAF90424CEAA8300B6AF2E /* Assets.xcassets */; };
 		D5AAF90824CEAA8300B6AF2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AAF90624CEAA8300B6AF2E /* LaunchScreen.storyboard */; };
 		D5AAF90B24CEAA8300B6AF2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF90A24CEAA8300B6AF2E /* main.m */; };
+		D5AAF91424CEAAA500B6AF2E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF91324CEAAA500B6AF2E /* LoginViewController.m */; };
+		D5AAF91824CEBB5D00B6AF2E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF91724CEBB5D00B6AF2E /* MainViewController.m */; };
+		D5AAF91B24D05AAA00B6AF2E /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF91A24D05AAA00B6AF2E /* RegisterViewController.m */; };
+		D5AAF92124D0F86300B6AF2E /* PageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF92024D0F86300B6AF2E /* PageTableViewCell.m */; };
+		D5AAF92424D1282B00B6AF2E /* PageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF92324D1282B00B6AF2E /* PageTableViewController.m */; };
+		D5AAF92824D16CD700B6AF2E /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF92724D16CD700B6AF2E /* UserInfo.m */; };
+		D5AAF92C24D16F4D00B6AF2E /* CustomTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF92B24D16F4D00B6AF2E /* CustomTabbarViewController.m */; };
+		D5AAF93224D1753200B6AF2E /* PostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF93124D1753200B6AF2E /* PostTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0ED11203A8D8DCBCB0E1F9A3 /* Pods-HackWeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackWeek.debug.xcconfig"; path = "Target Support Files/Pods-HackWeek/Pods-HackWeek.debug.xcconfig"; sourceTree = "<group>"; };
+		51572C99456947A184244677 /* Pods-HackWeek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackWeek.release.xcconfig"; path = "Target Support Files/Pods-HackWeek/Pods-HackWeek.release.xcconfig"; sourceTree = "<group>"; };
 		D5AAF8F224CEAA8000B6AF2E /* HackWeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackWeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AAF8F524CEAA8000B6AF2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D5AAF8F624CEAA8000B6AF2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -31,6 +42,23 @@
 		D5AAF90724CEAA8300B6AF2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5AAF90924CEAA8300B6AF2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5AAF90A24CEAA8300B6AF2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D5AAF91224CEAAA500B6AF2E /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D5AAF91324CEAAA500B6AF2E /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D5AAF91624CEBB5D00B6AF2E /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D5AAF91724CEBB5D00B6AF2E /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D5AAF91924D05AAA00B6AF2E /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		D5AAF91A24D05AAA00B6AF2E /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		D5AAF91F24D0F86300B6AF2E /* PageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageTableViewCell.h; sourceTree = "<group>"; };
+		D5AAF92024D0F86300B6AF2E /* PageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageTableViewCell.m; sourceTree = "<group>"; };
+		D5AAF92224D1282B00B6AF2E /* PageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageTableViewController.h; sourceTree = "<group>"; };
+		D5AAF92324D1282B00B6AF2E /* PageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageTableViewController.m; sourceTree = "<group>"; };
+		D5AAF92624D16CD700B6AF2E /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		D5AAF92724D16CD700B6AF2E /* UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		D5AAF92A24D16F4D00B6AF2E /* CustomTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabbarViewController.h; sourceTree = "<group>"; };
+		D5AAF92B24D16F4D00B6AF2E /* CustomTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabbarViewController.m; sourceTree = "<group>"; };
+		D5AAF93024D1753200B6AF2E /* PostTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostTableViewController.h; sourceTree = "<group>"; };
+		D5AAF93124D1753200B6AF2E /* PostTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostTableViewController.m; sourceTree = "<group>"; };
+		E2E7958D7D4438D5297D7765 /* libPods-HackWeek.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackWeek.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,17 +66,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EA1609E00F30D5C91B58E51 /* libPods-HackWeek.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C8AB323746EF6F92EBD4A50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0ED11203A8D8DCBCB0E1F9A3 /* Pods-HackWeek.debug.xcconfig */,
+				51572C99456947A184244677 /* Pods-HackWeek.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		643B78BFDACDE55223092C91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2E7958D7D4438D5297D7765 /* libPods-HackWeek.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D5AAF8E924CEAA8000B6AF2E = {
 			isa = PBXGroup;
 			children = (
 				D5AAF8F424CEAA8000B6AF2E /* HackWeek */,
 				D5AAF8F324CEAA8000B6AF2E /* Products */,
+				2C8AB323746EF6F92EBD4A50 /* Pods */,
+				643B78BFDACDE55223092C91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +111,8 @@
 		D5AAF8F424CEAA8000B6AF2E /* HackWeek */ = {
 			isa = PBXGroup;
 			children = (
+				D5AAF91524CEBB4E00B6AF2E /* Main */,
+				D5AAF91124CEAA9100B6AF2E /* Login */,
 				D5AAF8F524CEAA8000B6AF2E /* AppDelegate.h */,
 				D5AAF8F624CEAA8000B6AF2E /* AppDelegate.m */,
 				D5AAF8F824CEAA8000B6AF2E /* SceneDelegate.h */,
@@ -79,6 +129,76 @@
 			path = HackWeek;
 			sourceTree = "<group>";
 		};
+		D5AAF91124CEAA9100B6AF2E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D5AAF91224CEAAA500B6AF2E /* LoginViewController.h */,
+				D5AAF91324CEAAA500B6AF2E /* LoginViewController.m */,
+				D5AAF91924D05AAA00B6AF2E /* RegisterViewController.h */,
+				D5AAF91A24D05AAA00B6AF2E /* RegisterViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D5AAF91524CEBB4E00B6AF2E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D5AAF92924D16F2B00B6AF2E /* TabBar */,
+				D5AAF92524D16CC500B6AF2E /* UserInfo */,
+				D5AAF91E24D0F84800B6AF2E /* Profile */,
+				D5AAF91D24D0F84200B6AF2E /* Message */,
+				D5AAF91C24D0F82000B6AF2E /* Pages */,
+				D5AAF91624CEBB5D00B6AF2E /* MainViewController.h */,
+				D5AAF91724CEBB5D00B6AF2E /* MainViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D5AAF91C24D0F82000B6AF2E /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				D5AAF91F24D0F86300B6AF2E /* PageTableViewCell.h */,
+				D5AAF92024D0F86300B6AF2E /* PageTableViewCell.m */,
+				D5AAF92224D1282B00B6AF2E /* PageTableViewController.h */,
+				D5AAF92324D1282B00B6AF2E /* PageTableViewController.m */,
+				D5AAF93024D1753200B6AF2E /* PostTableViewController.h */,
+				D5AAF93124D1753200B6AF2E /* PostTableViewController.m */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		D5AAF91D24D0F84200B6AF2E /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		D5AAF91E24D0F84800B6AF2E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D5AAF92524D16CC500B6AF2E /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D5AAF92624D16CD700B6AF2E /* UserInfo.h */,
+				D5AAF92724D16CD700B6AF2E /* UserInfo.m */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		D5AAF92924D16F2B00B6AF2E /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D5AAF92A24D16F4D00B6AF2E /* CustomTabbarViewController.h */,
+				D5AAF92B24D16F4D00B6AF2E /* CustomTabbarViewController.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5AAF90E24CEAA8300B6AF2E /* Build configuration list for PBXNativeTarget "HackWeek" */;
 			buildPhases = (
+				C195ADE00FF67178FAB8814F /* [CP] Check Pods Manifest.lock */,
 				D5AAF8EE24CEAA8000B6AF2E /* Sources */,
 				D5AAF8EF24CEAA8000B6AF2E /* Frameworks */,
 				D5AAF8F024CEAA8000B6AF2E /* Resources */,
@@ -144,16 +265,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C195ADE00FF67178FAB8814F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackWeek-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D5AAF8EE24CEAA8000B6AF2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D5AAF90B24CEAA8300B6AF2E /* main.m in Sources */,
+				D5AAF93224D1753200B6AF2E /* PostTableViewController.m in Sources */,
 				D5AAF90324CEAA8000B6AF2E /* HackWeek.xcdatamodeld in Sources */,
+				D5AAF92424D1282B00B6AF2E /* PageTableViewController.m in Sources */,
+				D5AAF92124D0F86300B6AF2E /* PageTableViewCell.m in Sources */,
+				D5AAF91424CEAAA500B6AF2E /* LoginViewController.m in Sources */,
 				D5AAF8FD24CEAA8000B6AF2E /* ViewController.m in Sources */,
+				D5AAF91824CEBB5D00B6AF2E /* MainViewController.m in Sources */,
 				D5AAF8F724CEAA8000B6AF2E /* AppDelegate.m in Sources */,
+				D5AAF92824D16CD700B6AF2E /* UserInfo.m in Sources */,
+				D5AAF92C24D16F4D00B6AF2E /* CustomTabbarViewController.m in Sources */,
 				D5AAF8FA24CEAA8000B6AF2E /* SceneDelegate.m in Sources */,
+				D5AAF91B24D05AAA00B6AF2E /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +445,7 @@
 		};
 		D5AAF90F24CEAA8300B6AF2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ED11203A8D8DCBCB0E1F9A3 /* Pods-HackWeek.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +463,7 @@
 		};
 		D5AAF91024CEAA8300B6AF2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51572C99456947A184244677 /* Pods-HackWeek.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
