@@ -6,35 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>569DCC28-0D8B-4BBC-8F76-17B373377CF7</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>569DCC28-0D8B-4BBC-8F76-17B373377CF7.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>HackWeek-gzttzkaoutemlkhboojthdweuate</string>
-			<key>timeStartedRecording</key>
-			<real>617768126.93961203</real>
-			<key>timeStoppedRecording</key>
-			<real>617768127.37054098</real>
-			<key>title</key>
-			<string>Build target HackWeek</string>
-			<key>uniqueIdentifier</key>
-			<string>569DCC28-0D8B-4BBC-8F76-17B373377CF7</string>
-		</dict>
-		<key>6DD45826-2B29-41AB-8069-11064BD9C21B</key>
+		<key>641C5A94-FED5-4752-B65F-E2A6C8DEB33D</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -43,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
 			<key>fileName</key>
-			<string>6DD45826-2B29-41AB-8069-11064BD9C21B.xcactivitylog</string>
+			<string>641C5A94-FED5-4752-B65F-E2A6C8DEB33D.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -54,24 +26,24 @@
 			<key>signature</key>
 			<string>Masonry-dreajtgqbfcwnkhbbwfvgvlbtfyg</string>
 			<key>timeStartedRecording</key>
-			<real>617768127.37230599</real>
+			<real>617770113.61210895</real>
 			<key>timeStoppedRecording</key>
-			<real>617768127.37246501</real>
+			<real>617770113.61235702</real>
 			<key>title</key>
 			<string>Build target Masonry</string>
 			<key>uniqueIdentifier</key>
-			<string>6DD45826-2B29-41AB-8069-11064BD9C21B</string>
+			<string>641C5A94-FED5-4752-B65F-E2A6C8DEB33D</string>
 		</dict>
-		<key>84C56158-E9D9-4354-A5DE-F83E5B193075</key>
+		<key>6C321E1A-FC91-4FEC-BC2B-1FB6012C3CC2</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
 			<key>documentTypeString</key>
 			<string>&lt;nil&gt;</string>
 			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>84C56158-E9D9-4354-A5DE-F83E5B193075.xcactivitylog</string>
+			<string>6C321E1A-FC91-4FEC-BC2B-1FB6012C3CC2.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -80,15 +52,15 @@
 				<string>W</string>
 			</dict>
 			<key>signature</key>
-			<string>AFNetworking-dreajtgqbfcwnkhbbwfvgvlbtfyg</string>
+			<string>HackWeek-gzttzkaoutemlkhboojthdweuate</string>
 			<key>timeStartedRecording</key>
-			<real>617768127.37204397</real>
+			<real>617770113.26639402</real>
 			<key>timeStoppedRecording</key>
-			<real>617768127.37217402</real>
+			<real>617770113.61042297</real>
 			<key>title</key>
-			<string>Build target AFNetworking</string>
+			<string>Build target HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>84C56158-E9D9-4354-A5DE-F83E5B193075</string>
+			<string>6C321E1A-FC91-4FEC-BC2B-1FB6012C3CC2</string>
 		</dict>
 		<key>BDE99256-4AEF-4EEB-874A-BC0FB99F6D06</key>
 		<dict>
@@ -117,6 +89,34 @@
 			<string>Build target Pods-HackWeek</string>
 			<key>uniqueIdentifier</key>
 			<string>BDE99256-4AEF-4EEB-874A-BC0FB99F6D06</string>
+		</dict>
+		<key>DE32E99A-D83C-4A1F-958D-BF6BA1A8F220</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<key>fileName</key>
+			<string>DE32E99A-D83C-4A1F-958D-BF6BA1A8F220.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>AFNetworking-dreajtgqbfcwnkhbbwfvgvlbtfyg</string>
+			<key>timeStartedRecording</key>
+			<real>617770113.61253595</real>
+			<key>timeStoppedRecording</key>
+			<real>617770113.61268795</real>
+			<key>title</key>
+			<string>Build target AFNetworking</string>
+			<key>uniqueIdentifier</key>
+			<string>DE32E99A-D83C-4A1F-958D-BF6BA1A8F220</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

@@ -15,6 +15,8 @@
 
 @implementation RegisterViewController
 
+NSString *userId = @"";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
@@ -26,7 +28,6 @@
 
 #pragma mark click
 -(void)getCode{
-
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSString *emailtext = _email.text;
@@ -35,8 +36,28 @@
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self.getVerifyCode setTitle:@"重新获取验证码" forState:UIControlStateNormal];
+        userId = [[responseObject valueForKey:@"data"] valueForKey:@"_id"];
+        NSLog(@"the user id is %@", userId);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"获取验证码失败");
+    }];
+}
+
+-(void)registerAccount{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+
+    NSString *code = _verifyCode.text;
+    NSString *password = _paswword.text;
+    NSLog(@"the password is %@", password);
+    NSLog(@"the code is %@", code);
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [manager POST:@"http://s1.996404.xyz:3000/api/v1/user/verify" parameters:@{@"code": code, @"password":password, @"_id" : userId} progress:^(NSProgress * _Nonnull uploadProgress) {
+
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"注册成功");
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"注册失败");
     }];
 }
 
@@ -159,7 +180,7 @@
     }];
     _registerBtn.layer.cornerRadius = 10;
     
-//    [_registerBtn addTarget:self action:@selector(registerUser) forControlEvents:UIControlEventTouchUpInside];
+    [_registerBtn addTarget:self action:@selector(registerAccount) forControlEvents:UIControlEventTouchUpInside];
 }
 # pragma mark set Color
 -(UIColor*)colorWithHexString:(NSString*)hex
