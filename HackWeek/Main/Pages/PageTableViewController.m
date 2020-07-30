@@ -48,7 +48,9 @@ NSString *pageCell = @"pageCell";
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     NSDictionary *param = @{@"Authorization": [NSString stringWithFormat:@"Bearer %@", self.tabbar.userinfo.token]};
-    [manager GET:@"http://s1.996404.xyz:3000/api/v1/user/token?email=ffff&password=2222" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    
+    
+    [manager GET:@"http://s1.996404.xyz:3000/api/v1/user/token?email=6145&password=1234" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         self.pages = NSMutableArray.new;
         for (NSDictionary *dict in responseObject) {
             [self.pages addObject:dict];

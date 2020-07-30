@@ -66,19 +66,23 @@
 }
 
 -(void)login{
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET:@"http://s1.996404.xyz:3000/api/v1/user/token?email=ffff&password=2222" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:@"https://s1.996404.xyz:3000/api/v1/user/token?email=ffff&password=2222" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"get success");
         NSDictionary *dict = responseObject;
         self.userinfo = UserInfo.new;
         self.userinfo.token = [[dict valueForKey:@"data"] valueForKey:@"token"];
         self.userinfo.expire_time = [[[dict valueForKey:@"data"] valueForKey:@"expire_time"] integerValue];
         self.userinfo.userId = [[dict valueForKey:@"data"] valueForKey:@"_id"];
-
+        dispatch_semaphore_signal(semaphore);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求失败--%@",error);
+        dispatch_semaphore_signal(semaphore);
     }];
     
+
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     CustomTabbarViewController *controller =  [[CustomTabbarViewController alloc]init];
     controller.userinfo = self.userinfo;
     PageTableViewController *page = PageTableViewController.new;

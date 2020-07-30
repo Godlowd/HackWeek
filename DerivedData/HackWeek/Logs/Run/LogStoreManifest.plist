@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>7ADA8C93-E3E0-4788-A2BE-5B44947C3210</key>
+		<key>0F072509-2AD3-4332-BDD4-3240743867E4</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>7ADA8C93-E3E0-4788-A2BE-5B44947C3210.xcactivitylog</string>
+			<string>0F072509-2AD3-4332-BDD4-3240743867E4.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,13 +32,421 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617706541.67934704</real>
+			<real>617739970.943012</real>
 			<key>timeStoppedRecording</key>
-			<real>617718866.58022499</real>
+			<real>617740119.50470996</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>7ADA8C93-E3E0-4788-A2BE-5B44947C3210</string>
+			<string>0F072509-2AD3-4332-BDD4-3240743867E4</string>
+		</dict>
+		<key>3A971084-2DE8-4B59-976C-CC673BD6AFFF</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>3A971084-2DE8-4B59-976C-CC673BD6AFFF.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>HackWeek project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>HackWeek</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run HackWeek</string>
+			<key>timeStartedRecording</key>
+			<real>617739263.22802305</real>
+			<key>timeStoppedRecording</key>
+			<real>617739303.82271099</real>
+			<key>title</key>
+			<string>Run HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>3A971084-2DE8-4B59-976C-CC673BD6AFFF</string>
+		</dict>
+		<key>3EC3A630-2525-4387-8992-470BDA677F9B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>3EC3A630-2525-4387-8992-470BDA677F9B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>HackWeek project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>HackWeek</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run HackWeek</string>
+			<key>timeStartedRecording</key>
+			<real>617739465.10813999</real>
+			<key>timeStoppedRecording</key>
+			<real>617739483.72385597</real>
+			<key>title</key>
+			<string>Run HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>3EC3A630-2525-4387-8992-470BDA677F9B</string>
+		</dict>
+		<key>525B9DE7-D1BE-4DAA-A2C3-89E735E2449F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>525B9DE7-D1BE-4DAA-A2C3-89E735E2449F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>HackWeek project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>HackWeek</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run HackWeek</string>
+			<key>timeStartedRecording</key>
+			<real>617740119.817734</real>
+			<key>timeStoppedRecording</key>
+			<real>617766854.27519596</real>
+			<key>title</key>
+			<string>Run HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>525B9DE7-D1BE-4DAA-A2C3-89E735E2449F</string>
+		</dict>
+		<key>5A6FF57B-05A3-482A-A95F-8DDD71EDA1F5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5A6FF57B-05A3-482A-A95F-8DDD71EDA1F5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>HackWeek project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>HackWeek</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run HackWeek</string>
+			<key>timeStartedRecording</key>
+			<real>617766855.43436694</real>
+			<key>timeStoppedRecording</key>
+			<real>617767962.17446601</real>
+			<key>title</key>
+			<string>Run HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>5A6FF57B-05A3-482A-A95F-8DDD71EDA1F5</string>
+		</dict>
+		<key>5E50CD3B-8956-4A29-A0CF-2D08952BCE5B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5E50CD3B-8956-4A29-A0CF-2D08952BCE5B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>HackWeek project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>HackWeek</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run HackWeek</string>
+			<key>timeStartedRecording</key>
+			<real>617767991.89452696</real>
+			<key>timeStoppedRecording</key>
+			<real>617768020.90970099</real>
+			<key>title</key>
+			<string>Run HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>5E50CD3B-8956-4A29-A0CF-2D08952BCE5B</string>
+		</dict>
+		<key>657750DD-C6D8-48D7-936E-BCDBFA3C49D0</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>657750DD-C6D8-48D7-936E-BCDBFA3C49D0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>HackWeek project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>HackWeek</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run HackWeek</string>
+			<key>timeStartedRecording</key>
+			<real>617767962.521878</real>
+			<key>timeStoppedRecording</key>
+			<real>617767991.69909406</real>
+			<key>title</key>
+			<string>Run HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>657750DD-C6D8-48D7-936E-BCDBFA3C49D0</string>
+		</dict>
+		<key>727B7F76-51C2-4515-A292-06365E9D77A8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>727B7F76-51C2-4515-A292-06365E9D77A8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>HackWeek project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>HackWeek</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run HackWeek</string>
+			<key>timeStartedRecording</key>
+			<real>617739304.09898102</real>
+			<key>timeStoppedRecording</key>
+			<real>617739378.69831002</real>
+			<key>title</key>
+			<string>Run HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>727B7F76-51C2-4515-A292-06365E9D77A8</string>
+		</dict>
+		<key>8A0FD914-1B29-4ED4-BED7-6886E19DA50F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>8A0FD914-1B29-4ED4-BED7-6886E19DA50F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>HackWeek project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>HackWeek</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run HackWeek</string>
+			<key>timeStartedRecording</key>
+			<real>617768127.38316298</real>
+			<key>timeStoppedRecording</key>
+			<real>617768159.74565494</real>
+			<key>title</key>
+			<string>Run HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>8A0FD914-1B29-4ED4-BED7-6886E19DA50F</string>
+		</dict>
+		<key>95BA401C-828F-4846-8339-5BBAFE330D20</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>95BA401C-828F-4846-8339-5BBAFE330D20.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>HackWeek project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>HackWeek</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run HackWeek</string>
+			<key>timeStartedRecording</key>
+			<real>617768021.15889001</real>
+			<key>timeStoppedRecording</key>
+			<real>617768127.06468797</real>
+			<key>title</key>
+			<string>Run HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>95BA401C-828F-4846-8339-5BBAFE330D20</string>
+		</dict>
+		<key>A03D5FC9-D8A2-40B2-A271-F35D8FF5190E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A03D5FC9-D8A2-40B2-A271-F35D8FF5190E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>HackWeek project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>HackWeek</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run HackWeek</string>
+			<key>timeStartedRecording</key>
+			<real>617739378.91011298</real>
+			<key>timeStoppedRecording</key>
+			<real>617739425.19301498</real>
+			<key>title</key>
+			<string>Run HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>A03D5FC9-D8A2-40B2-A271-F35D8FF5190E</string>
+		</dict>
+		<key>BA64D715-38EB-48D7-9048-FC5DC2595805</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BA64D715-38EB-48D7-9048-FC5DC2595805.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>HackWeek project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>HackWeek</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run HackWeek</string>
+			<key>timeStartedRecording</key>
+			<real>617725060.20829797</real>
+			<key>timeStoppedRecording</key>
+			<real>617729681.62937295</real>
+			<key>title</key>
+			<string>Run HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>BA64D715-38EB-48D7-9048-FC5DC2595805</string>
+		</dict>
+		<key>CFEAAAC4-595A-4D82-8F38-085C4E22A824</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>CFEAAAC4-595A-4D82-8F38-085C4E22A824.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>HackWeek project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>HackWeek</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run HackWeek</string>
+			<key>timeStartedRecording</key>
+			<real>617739483.50229394</real>
+			<key>timeStoppedRecording</key>
+			<real>617739970.40422201</real>
+			<key>title</key>
+			<string>Run HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>CFEAAAC4-595A-4D82-8F38-085C4E22A824</string>
 		</dict>
 	</dict>
 </dict>

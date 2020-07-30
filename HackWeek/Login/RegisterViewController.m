@@ -8,6 +8,7 @@
 
 #import "RegisterViewController.h"
 #import <Masonry.h>
+#import <AFNetworking.h>
 @interface RegisterViewController ()
 
 @end
@@ -23,7 +24,23 @@
     // Do any additional setup after loading the view.
 }
 
+#pragma mark click
+-(void)getCode{
 
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    NSString *emailtext = _email.text;
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [manager POST:@"http://s1.996404.xyz:3000/api/v1/user/info" parameters:@{@"email": emailtext} progress:^(NSProgress * _Nonnull uploadProgress) {
+
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self.getVerifyCode setTitle:@"重新获取验证码" forState:UIControlStateNormal];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"获取验证码失败");
+    }];
+}
+
+# pragma mark Init
 -(void)titleInit{
    self.bigTitle = UILabel.new;
         self.bigTitle.text = @"1037号树洞";
@@ -63,6 +80,7 @@
     _email.layer.borderColor = [UIColor.blackColor CGColor];
     _email.layer.borderWidth = 1;
     _email.layer.cornerRadius = 5;
+    _email.autocapitalizationType=UITextAutocapitalizationTypeNone;
     NSMutableAttributedString *placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请输入华中大邮箱" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     _email.attributedPlaceholder = placeholderString;
     
@@ -80,6 +98,7 @@
     _verifyCode.layer.cornerRadius = 5;
     placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请输入验证码" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     _verifyCode.attributedPlaceholder = placeholderString;
+    _verifyCode.autocapitalizationType=UITextAutocapitalizationTypeNone;
     
     _getVerifyCode = [UIButton buttonWithType:UIButtonTypeCustom];
     [_getVerifyCode setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
@@ -91,7 +110,7 @@
         
     }];
     [_getVerifyCode setTitle:@"获取验证码" forState:UIControlStateNormal];
-//    [_getVerifyCode addTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
+    [_getVerifyCode addTarget:self action:@selector(getCode) forControlEvents:UIControlEventTouchUpInside];
     
     _paswword = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
     [self.view addSubview:_paswword];
@@ -107,6 +126,7 @@
     placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请设置密码" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     _paswword.attributedPlaceholder = placeholderString;
     _paswword.layer.cornerRadius = 5;
+    _paswword.autocapitalizationType=UITextAutocapitalizationTypeNone;
     
     _confirmPassword = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
     [self.view addSubview:_confirmPassword];
@@ -122,6 +142,7 @@
     placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请重复密码" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     _confirmPassword.attributedPlaceholder = placeholderString;
     _confirmPassword.layer.cornerRadius = 5;
+    _confirmPassword.autocapitalizationType=UITextAutocapitalizationTypeNone;
 }
 -(void)registerBtnInit{
     _registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];

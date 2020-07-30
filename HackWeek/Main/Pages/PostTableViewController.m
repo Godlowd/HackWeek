@@ -54,6 +54,34 @@ NSString *postCell = @"postCell";
             }];
         }
     }
+    else if (indexPath.row == 1){
+        for (UIView *subview in cell.subviews) {
+            [subview removeFromSuperview];
+            UITextField *text = UITextField.new;
+            NSMutableAttributedString *placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请输入标题" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:20]}];
+            text.attributedPlaceholder = placeholderString;
+            [cell addSubview:text];
+            [text mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(cell.mas_left).with.offset(52);
+                make.top.equalTo(cell.mas_top).with.offset(52);
+                make.bottom.equalTo(cell.mas_bottom).with.offset(-52);
+            }];
+        }
+    }
+    else if (indexPath.row == 2){
+        for (UIView *subview in cell.subviews) {
+            [subview removeFromSuperview];
+            UITextField *text = UITextField.new;
+            NSMutableAttributedString *placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请输入正文" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:20]}];
+            text.attributedPlaceholder = placeholderString;
+            [cell addSubview:text];
+            [text mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(cell.mas_left).with.offset(52);
+                make.top.equalTo(cell.mas_top).with.offset(52);
+                make.bottom.equalTo(cell.mas_bottom).with.offset(-52);
+            }];
+        }
+    }
     // Configure the cell...
     
     return cell;
