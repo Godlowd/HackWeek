@@ -16,9 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) UITableView *pageView;
 @property(nonatomic, strong) UIView *container;
 @property(nonatomic, strong) UIView *header;
-
 @property(nonatomic, strong) UserInfo *userinfo;
 @property(nonatomic, strong) CustomTabbarViewController *tabbar;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

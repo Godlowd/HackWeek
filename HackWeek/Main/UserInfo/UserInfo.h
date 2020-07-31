@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString *token;
 @property(nonatomic, strong) NSString *userId;
 @property(nonatomic) NSInteger *expire_time;
+//单例生成方法
++(instancetype)shareInstance;
 @end
 
 NS_ASSUME_NONNULL_END

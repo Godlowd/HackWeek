@@ -11,6 +11,7 @@
 #import <Masonry.h>
 #import <AFNetworking.h>
 #import "UserInfo.h"
+#import "PageDetailViewController.h"
 #import "PostTableViewController.h"
 @interface PageTableViewController ()
 
@@ -21,7 +22,7 @@
 NSString *pageCell = @"pageCell";
 
 -(void)viewWillAppear:(BOOL)animated{
-//    [self fetchPage];
+    [self fetchPage];
 }
 
 - (void)viewDidLoad {
@@ -45,10 +46,10 @@ NSString *pageCell = @"pageCell";
 }
 
 -(void)fetchPage{
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    NSDictionary *param = @{@"Authorization": [NSString stringWithFormat:@"Bearer %@", self.tabbar.userinfo.token]};
+    NSDictionary *param = @{@"Authorization": [NSString stringWithFormat:@"Bearer %@",[UserInfo shareInstance].token]};
     
     
     [manager GET:@"http://s1.996404.xyz:3000/api/v1/post" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -56,12 +57,12 @@ NSString *pageCell = @"pageCell";
         for (NSDictionary *dict in responseObject) {
             [self.pages addObject:dict];
         }
-        dispatch_semaphore_signal(semaphore);
+//        dispatch_semaphore_signal(semaphore);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求失败--%@",error);
-        dispatch_semaphore_signal(semaphore);
+//        dispatch_semaphore_signal(semaphore);
     }];
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+//    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
 }
 
 #pragma mark - PostPage
@@ -71,6 +72,14 @@ NSString *pageCell = @"pageCell";
     [self presentViewController:controller animated:YES completion:nil];
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PageDetailViewController *controller = PageDetailViewController.new;
+    NSDictionary *dict = _pages[indexPath.row];
+    controller.pageId = [[[dict valueForKey:@"data"] valueForKey:@"posts_info"][indexPath.row] valueForKey:@"_id"];
+    [self.navigationController pushViewController:controller animated:YES];
+    
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

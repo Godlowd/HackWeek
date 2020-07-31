@@ -45,8 +45,13 @@
 //        make.top.equalTo(self.password.mas_bottom).with.offset(-30);
 ////        make.bottom.equalTo(self.containerView).with.offset(-30);
 //    }];
+    PageTableViewController *page = PageTableViewController.new;
+
     RegisterViewController *controller = RegisterViewController.new;
-    [self presentViewController:controller animated:YES completion:nil];
+    
+     UITabBarController *tabbar = [[UITabBarController alloc] init];
+    
+    [self presentViewController:tabbar animated:YES completion:nil];
     
 }
 
@@ -67,48 +72,41 @@
 }
 
 -(void)loginPress{
-//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    [manager GET:@"http://s1.996404.xyz:3000/api/v1/user/token?email=a614567188@163.com&password=123456" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        NSLog(@"get success");
-//        NSDictionary *dict = responseObject;
-//        self.userinfo = UserInfo.new;
-//        self.userinfo.token = [[dict valueForKey:@"data"] valueForKey:@"token"];
-//        self.userinfo.expire_time = [[[dict valueForKey:@"data"] valueForKey:@"expire_time"] integerValue];
-//        self.userinfo.userId = [[dict valueForKey:@"data"] valueForKey:@"_id"];
-//        dispatch_semaphore_signal(semaphore);
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        NSLog(@"请求失败--%@",error);
-//        dispatch_semaphore_signal(semaphore);
-//    }];
-//
-//
-//    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-//    NSLog(@"succ");
-//
+    NSString *account = _account.text;
+    NSString *password = _password.text;
+    dispatch_queue_t queue = dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_HIGH);
+    dispatch_async(queue, ^{
+        dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
+        NSString *url = [[@"http://s1.996404.xyz:3000/api/v1/user/token?email=" stringByAppendingString:account] stringByAppendingString:[NSString stringWithFormat:@"&password=%@",password]];
+                   NSLog(@"%@",url);
+        [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                        dispatch_semaphore_signal(semaphore);
+                       NSLog(@"请求成功");
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                        dispatch_semaphore_signal(semaphore);
+                       NSLog(@"请求失败");
+        }];
+                   
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    });
     
-    NSArray *array =[[[UIApplication sharedApplication] connectedScenes] allObjects];
-    UIWindowScene *windowScene = (UIWindowScene *)array[0];
-    SceneDelegate *delegate =(SceneDelegate *)windowScene.delegate;
+        
     
+
+
     CustomTabbarViewController *controller =  [[CustomTabbarViewController alloc]init];
-    controller.userinfo = self.userinfo;
+    controller.modalPresentationStyle = UIModalPresentationFullScreen;
+    controller.delegate = controller;
     PageTableViewController *page = PageTableViewController.new;
-    page.tabbar = controller;
     page.tabBarItem.image = [UIImage imageNamed:@"首页"];
     [controller addChildViewController:page];
-    [delegate.window setRootViewController:controller];
-//    [self presentViewController:page animated:YES completion:nil];
-////    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
-////    NSLog(@"yess");
-////    window.rootViewController = controller;
-//
-//    UIViewController *test = UIViewController.new;
-//    test.view.backgroundColor = UIColor.yellowColor;
-//    [self.navigationController pushViewController:test animated:YES];
-//    [self.navigationController presentViewController:test animated:YES completion:nil];
-//    [self.navigationController pushViewController:controller animated:YES];
-//    [self.navigationController presentViewController:controller animated:YES completion:nil];
+    [self presentViewController:controller animated:YES completion:nil];
+
+
+    
 }
 
 
@@ -144,7 +142,7 @@
 
     NSMutableAttributedString *placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请输入华中大邮箱" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     _account.attributedPlaceholder = placeholderString;
-
+    [_account setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     _account.layer.borderWidth = 1;
     _account.layer.borderColor = UIColor.blackColor.CGColor;
     _account.layer.cornerRadius = 5;

@@ -23,6 +23,11 @@ NSString *placeholder = @"请输入正文";
 //}
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.imageArray = NSMutableArray.new;
     _cancel = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -50,6 +55,16 @@ NSString *placeholder = @"请输入正文";
 //        return 80;
 //    }
 //}
+-(void)bottomViewInit{
+    _bottom = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 20)];
+    [self.view addSubview:_bottom];
+    [_bottom mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).with.offset(30);
+        make.right.equalTo(self.view).with.offset(-30);
+        make.bottom.equalTo(self.view).with.offset(-10);
+    }];
+}
+
 #pragma mark - UIImagePickerControllerDelegate
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info{
     UIImage *pickImage = info[UIImagePickerControllerOriginalImage];
