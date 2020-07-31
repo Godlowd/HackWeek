@@ -11,6 +11,7 @@
 #import <Masonry.h>
 #import <AFNetworking.h>
 #import "UserInfo.h"
+#import "PostTableViewController.h"
 @interface PageTableViewController ()
 
 @end
@@ -20,7 +21,7 @@
 NSString *pageCell = @"pageCell";
 
 -(void)viewWillAppear:(BOOL)animated{
-    [self fetchPage];
+//    [self fetchPage];
 }
 
 - (void)viewDidLoad {
@@ -50,7 +51,7 @@ NSString *pageCell = @"pageCell";
     NSDictionary *param = @{@"Authorization": [NSString stringWithFormat:@"Bearer %@", self.tabbar.userinfo.token]};
     
     
-    [manager GET:@"http://s1.996404.xyz:3000/api/v1/user/token?email=6145&password=1234" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:@"http://s1.996404.xyz:3000/api/v1/post" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         self.pages = NSMutableArray.new;
         for (NSDictionary *dict in responseObject) {
             [self.pages addObject:dict];
@@ -61,6 +62,13 @@ NSString *pageCell = @"pageCell";
         dispatch_semaphore_signal(semaphore);
     }];
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+}
+
+#pragma mark - PostPage
+-(void)postPage{
+    PostTableViewController *controller = PostTableViewController.new;
+    controller.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
@@ -100,7 +108,7 @@ NSString *pageCell = @"pageCell";
         make.height.mas_equalTo(137);
         make.top.equalTo(self.view);
     }];
-    _header.backgroundColor = [self colorWithHexString:@"f8f6f9"];
+    _header.backgroundColor = [self colorWithHexString:@"435b5c"];
     
     UILabel *title = UILabel.new;
     title.text = @"1037号树洞";
@@ -121,6 +129,7 @@ NSString *pageCell = @"pageCell";
         make.right.equalTo(_header.mas_right).with.offset(-53);
         make.centerY.equalTo(title);
     }];
+    [newPage addTarget:self action:@selector(postPage) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

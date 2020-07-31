@@ -24,6 +24,7 @@
 		D5AAF92824D16CD700B6AF2E /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF92724D16CD700B6AF2E /* UserInfo.m */; };
 		D5AAF92C24D16F4D00B6AF2E /* CustomTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF92B24D16F4D00B6AF2E /* CustomTabbarViewController.m */; };
 		D5AAF93224D1753200B6AF2E /* PostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF93124D1753200B6AF2E /* PostTableViewController.m */; };
+		D5AAF98324D3AB1800B6AF2E /* CustomImageVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF98224D3AB1800B6AF2E /* CustomImageVIew.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		D5AAF92B24D16F4D00B6AF2E /* CustomTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabbarViewController.m; sourceTree = "<group>"; };
 		D5AAF93024D1753200B6AF2E /* PostTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostTableViewController.h; sourceTree = "<group>"; };
 		D5AAF93124D1753200B6AF2E /* PostTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostTableViewController.m; sourceTree = "<group>"; };
+		D5AAF98124D3AB1800B6AF2E /* CustomImageVIew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomImageVIew.h; sourceTree = "<group>"; };
+		D5AAF98224D3AB1800B6AF2E /* CustomImageVIew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomImageVIew.m; sourceTree = "<group>"; };
 		E2E7958D7D4438D5297D7765 /* libPods-HackWeek.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackWeek.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +146,7 @@
 		D5AAF91524CEBB4E00B6AF2E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D5AAF98024D3AA5A00B6AF2E /* CustomImageView */,
 				D5AAF92924D16F2B00B6AF2E /* TabBar */,
 				D5AAF92524D16CC500B6AF2E /* UserInfo */,
 				D5AAF91E24D0F84800B6AF2E /* Profile */,
@@ -197,6 +201,15 @@
 				D5AAF92B24D16F4D00B6AF2E /* CustomTabbarViewController.m */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D5AAF98024D3AA5A00B6AF2E /* CustomImageView */ = {
+			isa = PBXGroup;
+			children = (
+				D5AAF98124D3AB1800B6AF2E /* CustomImageVIew.h */,
+				D5AAF98224D3AB1800B6AF2E /* CustomImageVIew.m */,
+			);
+			path = CustomImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AAF90B24CEAA8300B6AF2E /* main.m in Sources */,
+				D5AAF98324D3AB1800B6AF2E /* CustomImageVIew.m in Sources */,
 				D5AAF93224D1753200B6AF2E /* PostTableViewController.m in Sources */,
 				D5AAF90324CEAA8000B6AF2E /* HackWeek.xcdatamodeld in Sources */,
 				D5AAF92424D1282B00B6AF2E /* PageTableViewController.m in Sources */,

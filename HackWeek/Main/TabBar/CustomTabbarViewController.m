@@ -17,6 +17,7 @@
 -(instancetype)init{
     self = [super init];
     self.userinfo = UserInfo.new;
+    
     return  self;
 }
 

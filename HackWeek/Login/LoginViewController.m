@@ -14,6 +14,7 @@
 #import "PageTableViewController.h"
 #import "UserInfo.h"
 #import "CustomTabbarViewController.h"
+#import "SceneDelegate.h"
 @interface LoginViewController ()
 
 @end
@@ -65,34 +66,48 @@
 
 }
 
--(void)login{
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET:@"https://s1.996404.xyz:3000/api/v1/user/token?email=ffff&password=2222" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"get success");
-        NSDictionary *dict = responseObject;
-        self.userinfo = UserInfo.new;
-        self.userinfo.token = [[dict valueForKey:@"data"] valueForKey:@"token"];
-        self.userinfo.expire_time = [[[dict valueForKey:@"data"] valueForKey:@"expire_time"] integerValue];
-        self.userinfo.userId = [[dict valueForKey:@"data"] valueForKey:@"_id"];
-        dispatch_semaphore_signal(semaphore);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"请求失败--%@",error);
-        dispatch_semaphore_signal(semaphore);
-    }];
+-(void)loginPress{
+//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    [manager GET:@"http://s1.996404.xyz:3000/api/v1/user/token?email=a614567188@163.com&password=123456" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSLog(@"get success");
+//        NSDictionary *dict = responseObject;
+//        self.userinfo = UserInfo.new;
+//        self.userinfo.token = [[dict valueForKey:@"data"] valueForKey:@"token"];
+//        self.userinfo.expire_time = [[[dict valueForKey:@"data"] valueForKey:@"expire_time"] integerValue];
+//        self.userinfo.userId = [[dict valueForKey:@"data"] valueForKey:@"_id"];
+//        dispatch_semaphore_signal(semaphore);
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"请求失败--%@",error);
+//        dispatch_semaphore_signal(semaphore);
+//    }];
+//
+//
+//    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+//    NSLog(@"succ");
+//
     
-
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    NSArray *array =[[[UIApplication sharedApplication] connectedScenes] allObjects];
+    UIWindowScene *windowScene = (UIWindowScene *)array[0];
+    SceneDelegate *delegate =(SceneDelegate *)windowScene.delegate;
+    
     CustomTabbarViewController *controller =  [[CustomTabbarViewController alloc]init];
     controller.userinfo = self.userinfo;
     PageTableViewController *page = PageTableViewController.new;
     page.tabbar = controller;
     page.tabBarItem.image = [UIImage imageNamed:@"首页"];
     [controller addChildViewController:page];
-//    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
-//    NSLog(@"yess");
-//    window.rootViewController = controller;
-    [self.navigationController pushViewController:controller animated:YES];
+    [delegate.window setRootViewController:controller];
+//    [self presentViewController:page animated:YES completion:nil];
+////    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+////    NSLog(@"yess");
+////    window.rootViewController = controller;
+//
+//    UIViewController *test = UIViewController.new;
+//    test.view.backgroundColor = UIColor.yellowColor;
+//    [self.navigationController pushViewController:test animated:YES];
+//    [self.navigationController presentViewController:test animated:YES completion:nil];
+//    [self.navigationController pushViewController:controller animated:YES];
 //    [self.navigationController presentViewController:controller animated:YES completion:nil];
 }
 
@@ -231,7 +246,7 @@
     _loginbtn.layer.cornerRadius = 10;
     _loginbtn.layer.borderColor = [UIColor.blackColor CGColor];
     _loginbtn.layer.borderWidth = 1;
-    [_loginbtn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
+    [_loginbtn addTarget:self action:@selector(loginPress) forControlEvents:UIControlEventTouchUpInside];
 }
 
 

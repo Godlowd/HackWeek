@@ -26,7 +26,7 @@
     page.tabBarItem.image = [UIImage imageNamed:@"首页"];
     UITabBarController *controller =  [[UITabBarController alloc]init];
     [controller addChildViewController:page];
-    _window.rootViewController = viewcontroller;
+    _window.rootViewController = controller;
      [_window makeKeyAndVisible];
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
