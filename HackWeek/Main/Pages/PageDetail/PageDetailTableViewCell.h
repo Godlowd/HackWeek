@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong) UIButton *comment;
 @property(nonatomic, strong) UIButton *good;
+
+-(void)initAvatarTimeNameContent;
 @end
 
 NS_ASSUME_NONNULL_END

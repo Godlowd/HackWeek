@@ -21,19 +21,19 @@
     // Configure the view for the selected state
 }
 
--(instancetype)init{
+-(void)initAvatarTitleContentTime{
     _avatar = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 52, 52)];
     [self addSubview:_avatar];
     [_avatar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_left).with.offset(45);
-        make.top.equalTo(self.mas_top).with.offset(47);
+        make.left.equalTo(self.mas_left).with.offset(20);
+        make.top.equalTo(self.mas_top).with.offset(20);
         make.height.mas_equalTo(52);
         make.width.mas_equalTo(52);
     }];
     _avatar.layer.cornerRadius = 52/2;
     _avatar.clipsToBounds = true;
     
-    self = [super init];
+    
     _title = UILabel.new;
     [self addSubview:_title];
     [_title mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -47,8 +47,9 @@
     [self addSubview:_content];
     [_content mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.avatar.mas_right).with.offset(27);
-        make.top.equalTo(self.title).with.offset(20);
+        make.top.equalTo(self.title).with.offset(54);
         make.height.mas_equalTo(15);
+        make.bottom.equalTo(self).with.offset(-20);
     }];
     _content.font = [UIFont systemFontOfSize:15];
     
@@ -60,8 +61,7 @@
         make.height.mas_equalTo(15);
     }];
     _time.font = [UIFont systemFontOfSize:15];
-    
-    return self;
+
 }
 
 @end

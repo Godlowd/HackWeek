@@ -27,6 +27,7 @@
 		D5AAF98324D3AB1800B6AF2E /* CustomImageVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF98224D3AB1800B6AF2E /* CustomImageVIew.m */; };
 		D5AAF98624D40B7900B6AF2E /* PageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF98524D40B7900B6AF2E /* PageDetailViewController.m */; };
 		D5AAF98924D4135900B6AF2E /* PageDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF98824D4135900B6AF2E /* PageDetailTableViewCell.m */; };
+		D5AAF98F24D5185300B6AF2E /* PostNewCommentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF98E24D5185300B6AF2E /* PostNewCommentTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,8 @@
 		D5AAF98524D40B7900B6AF2E /* PageDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageDetailViewController.m; sourceTree = "<group>"; };
 		D5AAF98724D4135900B6AF2E /* PageDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageDetailTableViewCell.h; sourceTree = "<group>"; };
 		D5AAF98824D4135900B6AF2E /* PageDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageDetailTableViewCell.m; sourceTree = "<group>"; };
+		D5AAF98D24D5185300B6AF2E /* PostNewCommentTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostNewCommentTableViewController.h; sourceTree = "<group>"; };
+		D5AAF98E24D5185300B6AF2E /* PostNewCommentTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostNewCommentTableViewController.m; sourceTree = "<group>"; };
 		E2E7958D7D4438D5297D7765 /* libPods-HackWeek.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackWeek.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,13 +170,12 @@
 		D5AAF91C24D0F82000B6AF2E /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				D5AAF98B24D47D4200B6AF2E /* PostNewPage */,
 				D5AAF98A24D4135B00B6AF2E /* PageDetail */,
 				D5AAF91F24D0F86300B6AF2E /* PageTableViewCell.h */,
 				D5AAF92024D0F86300B6AF2E /* PageTableViewCell.m */,
 				D5AAF92224D1282B00B6AF2E /* PageTableViewController.h */,
 				D5AAF92324D1282B00B6AF2E /* PageTableViewController.m */,
-				D5AAF93024D1753200B6AF2E /* PostTableViewController.h */,
-				D5AAF93124D1753200B6AF2E /* PostTableViewController.m */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -222,12 +224,31 @@
 		D5AAF98A24D4135B00B6AF2E /* PageDetail */ = {
 			isa = PBXGroup;
 			children = (
+				D5AAF98C24D5183900B6AF2E /* PostNewComment */,
 				D5AAF98424D40B7900B6AF2E /* PageDetailViewController.h */,
 				D5AAF98524D40B7900B6AF2E /* PageDetailViewController.m */,
 				D5AAF98724D4135900B6AF2E /* PageDetailTableViewCell.h */,
 				D5AAF98824D4135900B6AF2E /* PageDetailTableViewCell.m */,
 			);
 			path = PageDetail;
+			sourceTree = "<group>";
+		};
+		D5AAF98B24D47D4200B6AF2E /* PostNewPage */ = {
+			isa = PBXGroup;
+			children = (
+				D5AAF93024D1753200B6AF2E /* PostTableViewController.h */,
+				D5AAF93124D1753200B6AF2E /* PostTableViewController.m */,
+			);
+			path = PostNewPage;
+			sourceTree = "<group>";
+		};
+		D5AAF98C24D5183900B6AF2E /* PostNewComment */ = {
+			isa = PBXGroup;
+			children = (
+				D5AAF98D24D5185300B6AF2E /* PostNewCommentTableViewController.h */,
+				D5AAF98E24D5185300B6AF2E /* PostNewCommentTableViewController.m */,
+			);
+			path = PostNewComment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +362,7 @@
 				D5AAF92824D16CD700B6AF2E /* UserInfo.m in Sources */,
 				D5AAF92C24D16F4D00B6AF2E /* CustomTabbarViewController.m in Sources */,
 				D5AAF8FA24CEAA8000B6AF2E /* SceneDelegate.m in Sources */,
+				D5AAF98F24D5185300B6AF2E /* PostNewCommentTableViewController.m in Sources */,
 				D5AAF91B24D05AAA00B6AF2E /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

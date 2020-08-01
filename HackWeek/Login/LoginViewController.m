@@ -80,31 +80,38 @@
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         manager.requestSerializer = [AFJSONRequestSerializer serializer];
         NSString *url = [[@"http://s1.996404.xyz:3000/api/v1/user/token?email=" stringByAppendingString:account] stringByAppendingString:[NSString stringWithFormat:@"&password=%@",password]];
-                   NSLog(@"%@",url);
+        NSLog(@"%@",url);
         [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                        dispatch_semaphore_signal(semaphore);
-                       NSLog(@"请求成功");
+            NSLog(@"请求成功");
+            
+            dispatch_semaphore_signal(semaphore);
+            [UserInfo shareInstance].token = [[responseObject valueForKey:@"data"] valueForKey:@"token"];
+            [UserInfo shareInstance].userId = [[responseObject valueForKey:@"data"] valueForKey:@"_id"];
+            
+            CustomTabbarViewController *controller =  [[CustomTabbarViewController alloc]init];
+            controller.modalPresentationStyle = UIModalPresentationFullScreen;
+            controller.delegate = controller;
+            PageTableViewController *page = PageTableViewController.new;
+            page.tabBarItem.image = [UIImage imageNamed:@"首页"];
+            [controller addChildViewController:page];
+            [self presentViewController:controller animated:YES completion:nil];
+
+            
+            
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                        dispatch_semaphore_signal(semaphore);
-                       NSLog(@"请求失败");
+            dispatch_semaphore_signal(semaphore);
+            NSLog(@"请求失败fff");
         }];
-                   
-            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     });
     
         
     
 
 
-    CustomTabbarViewController *controller =  [[CustomTabbarViewController alloc]init];
-    controller.modalPresentationStyle = UIModalPresentationFullScreen;
-    controller.delegate = controller;
-    PageTableViewController *page = PageTableViewController.new;
-    page.tabBarItem.image = [UIImage imageNamed:@"首页"];
-    [controller addChildViewController:page];
-    [self presentViewController:controller animated:YES completion:nil];
-
+    
 
     
 }

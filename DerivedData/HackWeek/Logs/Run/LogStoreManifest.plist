@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>03A4736D-5BA9-4A61-B85A-016FB682E5DA</key>
+		<key>0584E1C6-2FB5-4E8B-82DD-2216666632BA</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>03A4736D-5BA9-4A61-B85A-016FB682E5DA.xcactivitylog</string>
+			<string>0584E1C6-2FB5-4E8B-82DD-2216666632BA.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,15 +32,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617897658.059461</real>
+			<real>617941071.35786605</real>
 			<key>timeStoppedRecording</key>
-			<real>617897948.31106305</real>
+			<real>617941123.83010602</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>03A4736D-5BA9-4A61-B85A-016FB682E5DA</string>
+			<string>0584E1C6-2FB5-4E8B-82DD-2216666632BA</string>
 		</dict>
-		<key>0FD4C357-CCD4-478A-8497-6A67174AF70F</key>
+		<key>1528F292-AF6B-42CC-B91A-A580D9D4EEEE</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>0FD4C357-CCD4-478A-8497-6A67174AF70F.xcactivitylog</string>
+			<string>1528F292-AF6B-42CC-B91A-A580D9D4EEEE.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,15 +66,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617897983.29873705</real>
+			<real>617940196.96458006</real>
 			<key>timeStoppedRecording</key>
-			<real>617898004.10972202</real>
+			<real>617940277.57435</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>0FD4C357-CCD4-478A-8497-6A67174AF70F</string>
+			<string>1528F292-AF6B-42CC-B91A-A580D9D4EEEE</string>
 		</dict>
-		<key>1039E6A1-B4B6-4E27-A344-F0C7BB01E5ED</key>
+		<key>15F50C19-BC62-4892-BB4C-0C3226939A35</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -83,7 +83,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>1039E6A1-B4B6-4E27-A344-F0C7BB01E5ED.xcactivitylog</string>
+			<string>15F50C19-BC62-4892-BB4C-0C3226939A35.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -100,15 +100,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617888485.94271302</real>
+			<real>617943772.26502395</real>
 			<key>timeStoppedRecording</key>
-			<real>617888511.29931605</real>
+			<real>617943871.95667899</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>1039E6A1-B4B6-4E27-A344-F0C7BB01E5ED</string>
+			<string>15F50C19-BC62-4892-BB4C-0C3226939A35</string>
 		</dict>
-		<key>127B0CB8-C63B-4279-92EA-08DCB4F60092</key>
+		<key>1AD435C9-FF08-4F59-9655-8F1CCE9F126E</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -117,7 +117,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>127B0CB8-C63B-4279-92EA-08DCB4F60092.xcactivitylog</string>
+			<string>1AD435C9-FF08-4F59-9655-8F1CCE9F126E.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -134,15 +134,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617888547.29231298</real>
+			<real>617947688.307163</real>
 			<key>timeStoppedRecording</key>
-			<real>617888650.45265996</real>
+			<real>617948383.01367199</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>127B0CB8-C63B-4279-92EA-08DCB4F60092</string>
+			<string>1AD435C9-FF08-4F59-9655-8F1CCE9F126E</string>
 		</dict>
-		<key>15F53B19-71EB-4D5E-8D8A-99BCFF96473B</key>
+		<key>2093DD74-76C7-450F-97E6-D45BE19DE491</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -151,7 +151,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>15F53B19-71EB-4D5E-8D8A-99BCFF96473B.xcactivitylog</string>
+			<string>2093DD74-76C7-450F-97E6-D45BE19DE491.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -168,15 +168,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617900726.15589905</real>
+			<real>617944022.34211802</real>
 			<key>timeStoppedRecording</key>
-			<real>617900795.82009804</real>
+			<real>617944268.91425097</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>15F53B19-71EB-4D5E-8D8A-99BCFF96473B</string>
+			<string>2093DD74-76C7-450F-97E6-D45BE19DE491</string>
 		</dict>
-		<key>2169D9F7-E25C-47B4-9AA2-6915F697ED42</key>
+		<key>25C89242-84CF-46C9-B95F-BD583173D7D3</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -185,7 +185,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>2169D9F7-E25C-47B4-9AA2-6915F697ED42.xcactivitylog</string>
+			<string>25C89242-84CF-46C9-B95F-BD583173D7D3.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -202,15 +202,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617889116.29073703</real>
+			<real>617941183.46194005</real>
 			<key>timeStoppedRecording</key>
-			<real>617889259.97250104</real>
+			<real>617941341.06612504</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>2169D9F7-E25C-47B4-9AA2-6915F697ED42</string>
+			<string>25C89242-84CF-46C9-B95F-BD583173D7D3</string>
 		</dict>
-		<key>357298A3-2D97-4698-B5FB-AA7A305CC0C4</key>
+		<key>26EA968D-D24E-4C84-A41A-79E20D9D2D7D</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -219,7 +219,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>357298A3-2D97-4698-B5FB-AA7A305CC0C4.xcactivitylog</string>
+			<string>26EA968D-D24E-4C84-A41A-79E20D9D2D7D.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -236,15 +236,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617900864.75404501</real>
+			<real>617940309.29292798</real>
 			<key>timeStoppedRecording</key>
-			<real>617901039.91851699</real>
+			<real>617940334.82727003</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>357298A3-2D97-4698-B5FB-AA7A305CC0C4</string>
+			<string>26EA968D-D24E-4C84-A41A-79E20D9D2D7D</string>
 		</dict>
-		<key>392AAA55-ACBF-491B-84A7-F192F5E5A837</key>
+		<key>28C4C62D-26A2-445F-AD70-9E862360CB78</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -253,7 +253,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>392AAA55-ACBF-491B-84A7-F192F5E5A837.xcactivitylog</string>
+			<string>28C4C62D-26A2-445F-AD70-9E862360CB78.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -270,15 +270,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617897433.810004</real>
+			<real>617944329.298154</real>
 			<key>timeStoppedRecording</key>
-			<real>617897535.77809501</real>
+			<real>617944383.759341</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>392AAA55-ACBF-491B-84A7-F192F5E5A837</string>
+			<string>28C4C62D-26A2-445F-AD70-9E862360CB78</string>
 		</dict>
-		<key>50BAEDEE-8F32-40D5-B712-E234538BCB3F</key>
+		<key>30FBFBBF-FC04-436C-B6A7-D21CC7402E18</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -287,7 +287,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>50BAEDEE-8F32-40D5-B712-E234538BCB3F.xcactivitylog</string>
+			<string>30FBFBBF-FC04-436C-B6A7-D21CC7402E18.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -304,15 +304,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617893983.66928005</real>
+			<real>617941123.66023695</real>
 			<key>timeStoppedRecording</key>
-			<real>617894021.11060202</real>
+			<real>617941154.58757401</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>50BAEDEE-8F32-40D5-B712-E234538BCB3F</string>
+			<string>30FBFBBF-FC04-436C-B6A7-D21CC7402E18</string>
 		</dict>
-		<key>620391CD-9DDC-4B24-8102-7B4572212CD6</key>
+		<key>3F36FC47-9A22-4C83-AE64-D07B768B3DF6</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -321,7 +321,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>620391CD-9DDC-4B24-8102-7B4572212CD6.xcactivitylog</string>
+			<string>3F36FC47-9A22-4C83-AE64-D07B768B3DF6.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -338,15 +338,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617897535.94972706</real>
+			<real>617944384.03209198</real>
 			<key>timeStoppedRecording</key>
-			<real>617897605.95233095</real>
+			<real>617944407.96337605</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>620391CD-9DDC-4B24-8102-7B4572212CD6</string>
+			<string>3F36FC47-9A22-4C83-AE64-D07B768B3DF6</string>
 		</dict>
-		<key>6BA6B587-BF6B-44DB-921E-1B9C1A4AF726</key>
+		<key>4BC1AAED-0A12-49B3-8B33-D61F4E2AE960</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -355,7 +355,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>6BA6B587-BF6B-44DB-921E-1B9C1A4AF726.xcactivitylog</string>
+			<string>4BC1AAED-0A12-49B3-8B33-D61F4E2AE960.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -372,15 +372,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617894170.78056598</real>
+			<real>617943481.96311498</real>
 			<key>timeStoppedRecording</key>
-			<real>617894271.56375003</real>
+			<real>617943592.80207801</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>6BA6B587-BF6B-44DB-921E-1B9C1A4AF726</string>
+			<string>4BC1AAED-0A12-49B3-8B33-D61F4E2AE960</string>
 		</dict>
-		<key>73F305E5-5EC5-45FE-A772-D15D0B92B600</key>
+		<key>55E32582-A067-4F3A-9BE8-11A73DC1FFF2</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -389,7 +389,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>73F305E5-5EC5-45FE-A772-D15D0B92B600.xcactivitylog</string>
+			<string>55E32582-A067-4F3A-9BE8-11A73DC1FFF2.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -406,15 +406,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617901040.17324901</real>
+			<real>617943592.82127905</real>
 			<key>timeStoppedRecording</key>
-			<real>617902333.14012098</real>
+			<real>617943772.069574</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>73F305E5-5EC5-45FE-A772-D15D0B92B600</string>
+			<string>55E32582-A067-4F3A-9BE8-11A73DC1FFF2</string>
 		</dict>
-		<key>7FEB494B-F3FA-42AE-8021-69F8831D4399</key>
+		<key>560B8DFA-760B-47E7-A85F-B81E31B258D8</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -423,7 +423,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>7FEB494B-F3FA-42AE-8021-69F8831D4399.xcactivitylog</string>
+			<string>560B8DFA-760B-47E7-A85F-B81E31B258D8.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -440,15 +440,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617888511.49172294</real>
+			<real>617941341.39749706</real>
 			<key>timeStoppedRecording</key>
-			<real>617888547.08460104</real>
+			<real>617941404.64406502</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>7FEB494B-F3FA-42AE-8021-69F8831D4399</string>
+			<string>560B8DFA-760B-47E7-A85F-B81E31B258D8</string>
 		</dict>
-		<key>83048F47-1CC7-42FB-B82F-B178170853BB</key>
+		<key>58F73F1D-1571-46E3-A396-C88C9C3791CE</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -457,7 +457,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>83048F47-1CC7-42FB-B82F-B178170853BB.xcactivitylog</string>
+			<string>58F73F1D-1571-46E3-A396-C88C9C3791CE.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -474,15 +474,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617898216.50448895</real>
+			<real>617943969.91481805</real>
 			<key>timeStoppedRecording</key>
-			<real>617898234.87158096</real>
+			<real>617943998.11664796</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>83048F47-1CC7-42FB-B82F-B178170853BB</string>
+			<string>58F73F1D-1571-46E3-A396-C88C9C3791CE</string>
 		</dict>
-		<key>8C4C764A-0586-4989-9BA2-EB05CB378D80</key>
+		<key>5DA6FC8E-2437-4B80-B830-3DAD7A5F039E</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -491,7 +491,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>8C4C764A-0586-4989-9BA2-EB05CB378D80.xcactivitylog</string>
+			<string>5DA6FC8E-2437-4B80-B830-3DAD7A5F039E.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -508,15 +508,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617876251.69225395</real>
+			<real>617943923.65155804</real>
 			<key>timeStoppedRecording</key>
-			<real>617878414.71597397</real>
+			<real>617943969.79029095</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>8C4C764A-0586-4989-9BA2-EB05CB378D80</string>
+			<string>5DA6FC8E-2437-4B80-B830-3DAD7A5F039E</string>
 		</dict>
-		<key>93DB612A-D6F9-4068-A580-4C257933912C</key>
+		<key>5E54DF81-313C-4419-AC2A-F2B633237D47</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -525,7 +525,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>93DB612A-D6F9-4068-A580-4C257933912C.xcactivitylog</string>
+			<string>5E54DF81-313C-4419-AC2A-F2B633237D47.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -542,15 +542,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617898039.31635106</real>
+			<real>617941007.55341899</real>
 			<key>timeStoppedRecording</key>
-			<real>617898216.23033202</real>
+			<real>617941071.01179194</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>93DB612A-D6F9-4068-A580-4C257933912C</string>
+			<string>5E54DF81-313C-4419-AC2A-F2B633237D47</string>
 		</dict>
-		<key>93EACF17-D24D-4124-B2A2-223BDA8C4BAE</key>
+		<key>5F97F9D0-387E-4458-B319-EB8E0315C8C7</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -559,7 +559,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>93EACF17-D24D-4124-B2A2-223BDA8C4BAE.xcactivitylog</string>
+			<string>5F97F9D0-387E-4458-B319-EB8E0315C8C7.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -576,15 +576,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617898260.82056296</real>
+			<real>617943872.31180298</real>
 			<key>timeStoppedRecording</key>
-			<real>617900374.77908301</real>
+			<real>617943923.34460497</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>93EACF17-D24D-4124-B2A2-223BDA8C4BAE</string>
+			<string>5F97F9D0-387E-4458-B319-EB8E0315C8C7</string>
 		</dict>
-		<key>94BC8FA5-C3DC-4A58-B780-83E096BB9088</key>
+		<key>7F3F1310-507D-43C0-96FC-8F7DABF9322D</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -593,7 +593,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>94BC8FA5-C3DC-4A58-B780-83E096BB9088.xcactivitylog</string>
+			<string>7F3F1310-507D-43C0-96FC-8F7DABF9322D.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -610,15 +610,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617894021.22168601</real>
+			<real>617941630.05378902</real>
 			<key>timeStoppedRecording</key>
-			<real>617894033.11300802</real>
+			<real>617943040.24396002</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>94BC8FA5-C3DC-4A58-B780-83E096BB9088</string>
+			<string>7F3F1310-507D-43C0-96FC-8F7DABF9322D</string>
 		</dict>
-		<key>9AE0CB6E-75BE-49E1-85C4-32106931D134</key>
+		<key>82178E88-57AC-4BE3-A394-1F973EBD9C48</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -627,7 +627,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>9AE0CB6E-75BE-49E1-85C4-32106931D134.xcactivitylog</string>
+			<string>82178E88-57AC-4BE3-A394-1F973EBD9C48.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -644,15 +644,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617900375.06238401</real>
+			<real>617941520.65357006</real>
 			<key>timeStoppedRecording</key>
-			<real>617900481.64451802</real>
+			<real>617941629.74942505</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>9AE0CB6E-75BE-49E1-85C4-32106931D134</string>
+			<string>82178E88-57AC-4BE3-A394-1F973EBD9C48</string>
 		</dict>
-		<key>9B36A1E1-7C49-4DCE-9D3D-A973FEA2D4FE</key>
+		<key>9225BED6-1174-48D7-9E20-FA4B750A2675</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -661,7 +661,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>9B36A1E1-7C49-4DCE-9D3D-A973FEA2D4FE.xcactivitylog</string>
+			<string>9225BED6-1174-48D7-9E20-FA4B750A2675.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -678,15 +678,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617889260.24697006</real>
+			<real>617941404.46763694</real>
 			<key>timeStoppedRecording</key>
-			<real>617893858.67794895</real>
+			<real>617941520.40992498</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>9B36A1E1-7C49-4DCE-9D3D-A973FEA2D4FE</string>
+			<string>9225BED6-1174-48D7-9E20-FA4B750A2675</string>
 		</dict>
-		<key>9CBB79E7-1A49-467F-A395-D9935A92C850</key>
+		<key>A530A166-9A22-416A-802C-303A4B5C621B</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -695,7 +695,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>9CBB79E7-1A49-467F-A395-D9935A92C850.xcactivitylog</string>
+			<string>A530A166-9A22-416A-802C-303A4B5C621B.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -712,15 +712,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617894033.214908</real>
+			<real>617943998.25706398</real>
 			<key>timeStoppedRecording</key>
-			<real>617894058.42577899</real>
+			<real>617944022.21075106</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>9CBB79E7-1A49-467F-A395-D9935A92C850</string>
+			<string>A530A166-9A22-416A-802C-303A4B5C621B</string>
 		</dict>
-		<key>A2C63CFE-ACCA-4FA7-A125-A4E73D78819F</key>
+		<key>A8319651-3CDA-4262-B1B7-22BC08BC9A5A</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -729,7 +729,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>A2C63CFE-ACCA-4FA7-A125-A4E73D78819F.xcactivitylog</string>
+			<string>A8319651-3CDA-4262-B1B7-22BC08BC9A5A.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -746,15 +746,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617888058.43401599</real>
+			<real>617908314.49347901</real>
 			<key>timeStoppedRecording</key>
-			<real>617888146.98841596</real>
+			<real>617908371.58771706</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>A2C63CFE-ACCA-4FA7-A125-A4E73D78819F</string>
+			<string>A8319651-3CDA-4262-B1B7-22BC08BC9A5A</string>
 		</dict>
-		<key>AAAE019B-64EE-4580-ACF0-3EF54898CA44</key>
+		<key>A911EAE8-B06E-44A7-AAE3-3E45B21B97B6</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -763,7 +763,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>AAAE019B-64EE-4580-ACF0-3EF54898CA44.xcactivitylog</string>
+			<string>A911EAE8-B06E-44A7-AAE3-3E45B21B97B6.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -780,15 +780,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617900795.61591399</real>
+			<real>617940334.63507199</real>
 			<key>timeStoppedRecording</key>
-			<real>617900864.97403395</real>
+			<real>617940397.26005995</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>AAAE019B-64EE-4580-ACF0-3EF54898CA44</string>
+			<string>A911EAE8-B06E-44A7-AAE3-3E45B21B97B6</string>
 		</dict>
-		<key>AAC5E838-D527-494E-B5E3-463AA09BC827</key>
+		<key>AB44BCE0-39E7-4F02-BE3B-1E32DB3CA74D</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -797,7 +797,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>AAC5E838-D527-494E-B5E3-463AA09BC827.xcactivitylog</string>
+			<string>AB44BCE0-39E7-4F02-BE3B-1E32DB3CA74D.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -814,15 +814,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617898235.12949395</real>
+			<real>617941154.40851498</real>
 			<key>timeStoppedRecording</key>
-			<real>617898260.58780599</real>
+			<real>617941183.64576602</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>AAC5E838-D527-494E-B5E3-463AA09BC827</string>
+			<string>AB44BCE0-39E7-4F02-BE3B-1E32DB3CA74D</string>
 		</dict>
-		<key>B6993056-83E7-4E87-B9B7-7276A749DDD7</key>
+		<key>AC8516EA-0A73-49CC-A87F-B6B0299C3D36</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -831,7 +831,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>B6993056-83E7-4E87-B9B7-7276A749DDD7.xcactivitylog</string>
+			<string>AC8516EA-0A73-49CC-A87F-B6B0299C3D36.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -848,15 +848,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617888650.71013498</real>
+			<real>617944269.47341299</real>
 			<key>timeStoppedRecording</key>
-			<real>617889116.02395904</real>
+			<real>617944329.04257095</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>B6993056-83E7-4E87-B9B7-7276A749DDD7</string>
+			<string>AC8516EA-0A73-49CC-A87F-B6B0299C3D36</string>
 		</dict>
-		<key>C51D52D7-0BA1-4C05-BF0D-B30888170AF7</key>
+		<key>B3287A63-DBE6-4CD5-ACD4-A373026C8116</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -865,7 +865,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>C51D52D7-0BA1-4C05-BF0D-B30888170AF7.xcactivitylog</string>
+			<string>B3287A63-DBE6-4CD5-ACD4-A373026C8116.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -882,15 +882,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617894271.69120097</real>
+			<real>617948470.626423</real>
 			<key>timeStoppedRecording</key>
-			<real>617897433.53150499</real>
+			<real>617948496.81376696</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>C51D52D7-0BA1-4C05-BF0D-B30888170AF7</string>
+			<string>B3287A63-DBE6-4CD5-ACD4-A373026C8116</string>
 		</dict>
-		<key>C8C8D34A-926F-4F76-ACCD-3E101ACC29AA</key>
+		<key>BA913F67-AF75-497F-90D7-C156E7C9B285</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -899,7 +899,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>C8C8D34A-926F-4F76-ACCD-3E101ACC29AA.xcactivitylog</string>
+			<string>BA913F67-AF75-497F-90D7-C156E7C9B285.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -916,15 +916,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617900507.65962803</real>
+			<real>617943443.82089102</real>
 			<key>timeStoppedRecording</key>
-			<real>617900725.84644401</real>
+			<real>617943481.70650101</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>C8C8D34A-926F-4F76-ACCD-3E101ACC29AA</string>
+			<string>BA913F67-AF75-497F-90D7-C156E7C9B285</string>
 		</dict>
-		<key>CC6981CF-2C74-4CF5-8EAF-0A943499DCC3</key>
+		<key>C6FC9050-03C1-4DC5-A057-03967E391F4D</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -933,7 +933,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>CC6981CF-2C74-4CF5-8EAF-0A943499DCC3.xcactivitylog</string>
+			<string>C6FC9050-03C1-4DC5-A057-03967E391F4D.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -950,15 +950,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617888460.93545306</real>
+			<real>617940397.46674097</real>
 			<key>timeStoppedRecording</key>
-			<real>617888485.74970806</real>
+			<real>617940526.23801994</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>CC6981CF-2C74-4CF5-8EAF-0A943499DCC3</string>
+			<string>C6FC9050-03C1-4DC5-A057-03967E391F4D</string>
 		</dict>
-		<key>D855491C-0BAB-4291-9333-79CCF6B7DBCD</key>
+		<key>D77D56C1-D80A-461C-BCAB-D9C643637496</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -967,7 +967,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>D855491C-0BAB-4291-9333-79CCF6B7DBCD.xcactivitylog</string>
+			<string>D77D56C1-D80A-461C-BCAB-D9C643637496.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -984,15 +984,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617888147.26310802</real>
+			<real>617940277.80889499</real>
 			<key>timeStoppedRecording</key>
-			<real>617888460.69008195</real>
+			<real>617940309.21291804</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>D855491C-0BAB-4291-9333-79CCF6B7DBCD</string>
+			<string>D77D56C1-D80A-461C-BCAB-D9C643637496</string>
 		</dict>
-		<key>E32B197C-DED2-4058-A595-86F10BD85620</key>
+		<key>DE7E33E7-D5A6-44CB-A0F9-967F212C6290</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1001,7 +1001,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>E32B197C-DED2-4058-A595-86F10BD85620.xcactivitylog</string>
+			<string>DE7E33E7-D5A6-44CB-A0F9-967F212C6290.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1018,15 +1018,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617900481.91793799</real>
+			<real>617940041.834149</real>
 			<key>timeStoppedRecording</key>
-			<real>617900507.83746302</real>
+			<real>617940196.66280794</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>E32B197C-DED2-4058-A595-86F10BD85620</string>
+			<string>DE7E33E7-D5A6-44CB-A0F9-967F212C6290</string>
 		</dict>
-		<key>E903172D-3CEE-45CF-9053-4B30E9F1FF8F</key>
+		<key>E27F2D14-75E5-4811-B93B-624B9825EAD0</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1035,7 +1035,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>E903172D-3CEE-45CF-9053-4B30E9F1FF8F.xcactivitylog</string>
+			<string>E27F2D14-75E5-4811-B93B-624B9825EAD0.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1052,15 +1052,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617894058.54599202</real>
+			<real>617940802.47716701</real>
 			<key>timeStoppedRecording</key>
-			<real>617894157.94324005</real>
+			<real>617941004.811252</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>E903172D-3CEE-45CF-9053-4B30E9F1FF8F</string>
+			<string>E27F2D14-75E5-4811-B93B-624B9825EAD0</string>
 		</dict>
-		<key>F09A5F47-9370-4257-88D8-E576821D6F3F</key>
+		<key>E4E6FB61-6CBE-4247-928E-54C04D15F70E</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1069,7 +1069,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>F09A5F47-9370-4257-88D8-E576821D6F3F.xcactivitylog</string>
+			<string>E4E6FB61-6CBE-4247-928E-54C04D15F70E.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1086,15 +1086,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617893858.88434303</real>
+			<real>617947503.38046205</real>
 			<key>timeStoppedRecording</key>
-			<real>617893946.98567998</real>
+			<real>617947685.04500496</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>F09A5F47-9370-4257-88D8-E576821D6F3F</string>
+			<string>E4E6FB61-6CBE-4247-928E-54C04D15F70E</string>
 		</dict>
-		<key>F2198B9E-DEBE-4C2C-9B38-A5AA2A12E143</key>
+		<key>F5A2A8D9-4E49-4448-85E8-6C4ED4AA6781</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1103,7 +1103,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>F2198B9E-DEBE-4C2C-9B38-A5AA2A12E143.xcactivitylog</string>
+			<string>F5A2A8D9-4E49-4448-85E8-6C4ED4AA6781.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1120,15 +1120,15 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617893947.19368505</real>
+			<real>617940526.50828898</real>
 			<key>timeStoppedRecording</key>
-			<real>617893983.58541501</real>
+			<real>617940802.08974004</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>F2198B9E-DEBE-4C2C-9B38-A5AA2A12E143</string>
+			<string>F5A2A8D9-4E49-4448-85E8-6C4ED4AA6781</string>
 		</dict>
-		<key>FE0729C2-828C-4200-9C98-496174DFFC77</key>
+		<key>FCD30C66-F12B-4C0E-BD3C-333106CC52F5</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1137,7 +1137,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>FE0729C2-828C-4200-9C98-496174DFFC77.xcactivitylog</string>
+			<string>FCD30C66-F12B-4C0E-BD3C-333106CC52F5.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1154,13 +1154,13 @@
 			<key>signature</key>
 			<string>Run HackWeek</string>
 			<key>timeStartedRecording</key>
-			<real>617897948.55808401</real>
+			<real>617948383.25866401</real>
 			<key>timeStoppedRecording</key>
-			<real>617897983.06976104</real>
+			<real>617948414.95834994</real>
 			<key>title</key>
 			<string>Run HackWeek</string>
 			<key>uniqueIdentifier</key>
-			<string>FE0729C2-828C-4200-9C98-496174DFFC77</string>
+			<string>FCD30C66-F12B-4C0E-BD3C-333106CC52F5</string>
 		</dict>
 	</dict>
 </dict>

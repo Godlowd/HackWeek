@@ -16,6 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString *pageId;
 //帖子内容
 @property(nonatomic, strong) NSDictionary *pageDetailDict;
+//底部视图
+@property(nonatomic, strong) UIView *footerView;
+//底部按钮
+@property(nonatomic, strong) UIButton *comment;
+@property(nonatomic, strong) UIButton *like;
+
 @end
 
 NS_ASSUME_NONNULL_END

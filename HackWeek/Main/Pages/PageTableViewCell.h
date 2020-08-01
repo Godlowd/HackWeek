@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) UILabel *content;
 @property(nonatomic, strong) UILabel *time;
 
-
+-(void)initAvatarTitleContentTime;
 @end
 
 NS_ASSUME_NONNULL_END

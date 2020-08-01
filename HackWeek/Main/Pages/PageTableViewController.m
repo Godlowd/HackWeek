@@ -22,17 +22,18 @@
 NSString *pageCell = @"pageCell";
 
 -(void)viewWillAppear:(BOOL)animated{
+    self.pages = NSMutableArray.new;
     [self fetchPage];
+    NSLog(@"the dict is %@", self.pages);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:false];
-    self.pageView.delegate = self;
-    self.pageView.dataSource = self;
+
     self.view.backgroundColor = UIColor.yellowColor;
     [self containerInit];
-        [self headerViewInit];
+    [self headerViewInit];
     [self tableViewInit];
 
     
@@ -46,23 +47,22 @@ NSString *pageCell = @"pageCell";
 }
 
 -(void)fetchPage{
-//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-    NSDictionary *param = @{@"Authorization": [NSString stringWithFormat:@"Bearer %@",[UserInfo shareInstance].token]};
-    
-    
-    [manager GET:@"http://s1.996404.xyz:3000/api/v1/post" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        self.pages = NSMutableArray.new;
-        for (NSDictionary *dict in responseObject) {
+    manager.completionQueue = dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_DEFAULT);
+    [manager.requestSerializer setValue: [NSString stringWithFormat:@"Bearer %@", [UserInfo shareInstance].token] forHTTPHeaderField:@"Authorization"];
+//    dispatch_queue_t queue = dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_HIGH);
+    [manager GET:@"http://s1.996404.xyz:3000/api/v1/post" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"请求所有帖子成功");
+        for (NSDictionary *dict in [[responseObject valueForKey:@"data"] valueForKey:@"posts_info"]) {
             [self.pages addObject:dict];
         }
-//        dispatch_semaphore_signal(semaphore);
+        dispatch_semaphore_signal(semaphore);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求失败--%@",error);
-//        dispatch_semaphore_signal(semaphore);
+        dispatch_semaphore_signal(semaphore);
     }];
-//    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
 }
 
 #pragma mark - PostPage
@@ -74,10 +74,13 @@ NSString *pageCell = @"pageCell";
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.pageView deselectRowAtIndexPath:indexPath animated:YES];
     PageDetailViewController *controller = PageDetailViewController.new;
     NSDictionary *dict = _pages[indexPath.row];
-    controller.pageId = [[[dict valueForKey:@"data"] valueForKey:@"posts_info"][indexPath.row] valueForKey:@"_id"];
-    [self.navigationController pushViewController:controller animated:YES];
+    controller.pageId = [dict valueForKey:@"_id"];
+    controller.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:controller animated:YES completion:nil];
+//    [self.navigationController pushViewController:controller animated:YES];
     
 }
 #pragma mark - Table view data source
@@ -87,6 +90,7 @@ NSString *pageCell = @"pageCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
     return self.pages.count;
 }
 # pragma mark Init
@@ -106,6 +110,9 @@ NSString *pageCell = @"pageCell";
         make.top.equalTo(self.header.mas_bottom);
         make.bottom.equalTo(self.container.mas_bottom);
     }];
+    self.pageView.delegate = self;
+    self.pageView.dataSource = self;
+    self.pageView.rowHeight = UITableViewAutomaticDimension;
 }
 
 -(void)headerViewInit{
@@ -143,10 +150,12 @@ NSString *pageCell = @"pageCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:pageCell forIndexPath:indexPath];
+    
     for (UIView *subview in cell.subviews) {
         [subview removeFromSuperview];
     }
     NSDictionary *dict = _pages[indexPath.row];
+    [cell initAvatarTitleContentTime];
     cell.title.text = [dict valueForKey:@"title"];
     cell.content.text = [dict valueForKey:@"content"];
     cell.time.text = [self getDateStringWithTimeStr:[dict valueForKey:@"updated_at"]];
