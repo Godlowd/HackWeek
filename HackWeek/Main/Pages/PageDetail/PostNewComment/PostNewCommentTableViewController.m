@@ -63,6 +63,94 @@ NSString *postnewcommentcell = @"postnewcommentcell";
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(void)upLoadFile{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"选择" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *lib = [UIAlertAction actionWithTitle:@"照片/视频" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+            return;
+        }
+        //2.创建图片选择控制器
+        UIImagePickerController *ipc = [[UIImagePickerController alloc]init];
+        ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        ipc.delegate = self;
+        //选中之后大图编辑模式
+        ipc.allowsEditing = YES;
+        [self presentViewController:ipc animated:YES completion:nil];
+        
+        
+    }];
+    UIAlertAction *capture = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            return;
+        }
+        //2.创建图片选择控制器
+        UIImagePickerController *ipc = [[UIImagePickerController alloc]init];
+        ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
+        ipc.delegate = self;
+        //选中之后大图编辑模式
+        ipc.allowsEditing = YES;
+        [self presentViewController:ipc animated:YES completion:nil];
+    }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [alert addAction:lib];
+    [alert addAction:capture];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info{
+    UIImage *pickImage = info[UIImagePickerControllerOriginalImage];
+    UIImageView *view = [[UIImageView alloc] initWithImage:pickImage];
+    for (UITableViewCell *cell in self.tableView.visibleCells) {
+        if (cell.tag == 2) {
+            UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, IMG_WIDTH, IMG_WIDTH)];
+            view.clipsToBounds = YES;
+            [view setContentMode:UIViewContentModeScaleToFill];
+        view.image = [self scaleImg:pickImage withSize:CGSizeMake(IMG_WIDTH, IMG_HEIGHT)];
+            [self.customimageview addSubview:view];
+            [view mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(self.customimageview).with.offset((self.imageArray.count%3) * IMG_WIDTH);
+                make.top.equalTo(self.customimageview).with.offset((self.imageArray.count/3) * IMG_HEIGHT );
+                make.height.mas_greaterThanOrEqualTo(IMG_HEIGHT);
+                make.width.mas_equalTo(IMG_WIDTH);
+            }];
+        [self.imageArray addObject:view];
+
+        [self.customimageview mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.mas_equalTo(IMG_HEIGHT * ((self.imageArray.count / 3 ) + 1));
+        }];
+        [self.addBtn mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.customimageview).with.offset(IMG_WIDTH * (self.imageArray.count % 3) );
+            make.top.equalTo(self.customimageview).with.offset(IMG_HEIGHT * (self.imageArray.count / 3 ));
+            make.height.mas_greaterThanOrEqualTo(IMG_HEIGHT);
+            make.width.mas_equalTo(IMG_WIDTH);
+            make.bottom.equalTo(self.customimageview);
+            
+        }];
+            [self.tableView beginUpdates];
+            [self.tableView endUpdates];
+
+            [self.tableView layoutIfNeeded];
+        }
+    }
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+//缩放图片
+-(UIImage *)scaleImg:(UIImage *)img withSize:(CGSize) wannaSize{
+    UIImage *orignialImg = img;
+    UIGraphicsBeginImageContextWithOptions(wannaSize, false, 0);
+    [orignialImg drawInRect:CGRectMake(0, 0, wannaSize.width, wannaSize.height)];
+    UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImg;
+}
 #pragma mark - Init
 -(void)tableviewInit{
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];

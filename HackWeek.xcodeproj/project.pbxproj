@@ -32,6 +32,8 @@
 		D5AAF99924D56FE000B6AF2E /* PrivateChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF99824D56FE000B6AF2E /* PrivateChatTableViewCell.m */; };
 		D5AAF9CD24DB171E00B6AF2E /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF9CC24DB171E00B6AF2E /* CommentTableViewCell.m */; };
 		D5AAF9D324DB1C6700B6AF2E /* LikeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF9D224DB1C6700B6AF2E /* LikeTableViewCell.m */; };
+		D5AAF9D624DB5B9000B6AF2E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF9D524DB5B9000B6AF2E /* ProfileViewController.m */; };
+		D5AAF9D924DB5CFD00B6AF2E /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF9D824DB5CFD00B6AF2E /* SettingTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,10 @@
 		D5AAF9CC24DB171E00B6AF2E /* CommentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
 		D5AAF9D124DB1C6700B6AF2E /* LikeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LikeTableViewCell.h; sourceTree = "<group>"; };
 		D5AAF9D224DB1C6700B6AF2E /* LikeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LikeTableViewCell.m; sourceTree = "<group>"; };
+		D5AAF9D424DB5B9000B6AF2E /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		D5AAF9D524DB5B9000B6AF2E /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		D5AAF9D724DB5CFD00B6AF2E /* SettingTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		D5AAF9D824DB5CFD00B6AF2E /* SettingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		E2E7958D7D4438D5297D7765 /* libPods-HackWeek.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackWeek.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -207,6 +213,10 @@
 		D5AAF91E24D0F84800B6AF2E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				D5AAF9D424DB5B9000B6AF2E /* ProfileViewController.h */,
+				D5AAF9D524DB5B9000B6AF2E /* ProfileViewController.m */,
+				D5AAF9D724DB5CFD00B6AF2E /* SettingTableViewController.h */,
+				D5AAF9D824DB5CFD00B6AF2E /* SettingTableViewController.m */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -396,9 +406,11 @@
 				D5AAF98324D3AB1800B6AF2E /* CustomImageVIew.m in Sources */,
 				D5AAF93224D1753200B6AF2E /* PostTableViewController.m in Sources */,
 				D5AAF98624D40B7900B6AF2E /* PageDetailViewController.m in Sources */,
+				D5AAF9D924DB5CFD00B6AF2E /* SettingTableViewController.m in Sources */,
 				D5AAF90324CEAA8000B6AF2E /* HackWeek.xcdatamodeld in Sources */,
 				D5AAF92424D1282B00B6AF2E /* PageTableViewController.m in Sources */,
 				D5AAF92124D0F86300B6AF2E /* PageTableViewCell.m in Sources */,
+				D5AAF9D624DB5B9000B6AF2E /* ProfileViewController.m in Sources */,
 				D5AAF98924D4135900B6AF2E /* PageDetailTableViewCell.m in Sources */,
 				D5AAF91424CEAAA500B6AF2E /* LoginViewController.m in Sources */,
 				D5AAF8FD24CEAA8000B6AF2E /* ViewController.m in Sources */,

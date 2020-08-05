@@ -10,7 +10,7 @@
 #import "CustomImageVIew.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PostNewCommentTableViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface PostNewCommentTableViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 
 @property(nonatomic, strong) UIButton *postPage;

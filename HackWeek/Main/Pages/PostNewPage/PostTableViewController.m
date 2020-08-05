@@ -337,6 +337,7 @@ NSString *placeholder = @"请输入正文";
             make.top.equalTo(cell);
             make.height.mas_greaterThanOrEqualTo(100);
         }];
+        
         self.customimageview = [[CustomImageVIew alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 50)];
         [cell addSubview:self.customimageview];
         [self.customimageview mas_makeConstraints:^(MASConstraintMaker *make) {

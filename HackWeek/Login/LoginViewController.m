@@ -16,6 +16,7 @@
 #import "CustomTabbarViewController.h"
 #import "SceneDelegate.h"
 #import "BaseViewController.h"
+#import "ProfileViewController.h"
 @interface LoginViewController ()
 
 @end
@@ -81,11 +82,17 @@
             controller.delegate = controller;
             PageTableViewController *page = PageTableViewController.new;
             BaseViewController *base = BaseViewController.new;
+            ProfileViewController *profile = ProfileViewController.new;
             UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:page];
-            page.tabBarItem.image = [UIImage imageNamed:@"首页"];
-            base.tabBarItem.image = [UIImage imageNamed:@"消息"];
+            page.tabBarItem.image = [self scaleImg:[UIImage imageNamed:@"首页"] withSize:CGSizeMake(30, 30)];
+            page.tabBarItem.title = @"首页";
+            base.tabBarItem.image = [self scaleImg:[UIImage imageNamed:@"消息"] withSize:CGSizeMake(30, 30)];
+            base.tabBarItem.title = @"消息";
+            profile.tabBarItem.image = [self scaleImg:[UIImage imageNamed:@"我的"] withSize:CGSizeMake(30, 30)];
+            profile.tabBarItem.title = @"我的";
             [controller addChildViewController:page];
             [controller addChildViewController:base];
+            [controller addChildViewController:profile];
 //            [self.navigationController pushViewController:controller animated:YES];
             [self presentViewController:controller animated:YES completion:nil];
 
@@ -278,6 +285,16 @@
                             blue:((float) b / 255.0f)
                            alpha:1.0f];
 }
+
+-(UIImage *)scaleImg:(UIImage *)img withSize:(CGSize) wannaSize{
+    UIImage *orignialImg = img;
+    UIGraphicsBeginImageContextWithOptions(wannaSize, false, 0);
+    [orignialImg drawInRect:CGRectMake(0, 0, wannaSize.width, wannaSize.height)];
+    UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImg;
+}
+
 /*
 #pragma mark - Navigation
 
