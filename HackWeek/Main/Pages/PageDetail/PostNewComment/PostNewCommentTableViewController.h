@@ -20,6 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong) CustomImageVIew *customimageview;
 @property(nonatomic, strong) UIButton *addBtn;
+
+@property(nonatomic, strong) UITextView *text;
+
+@property(nonatomic, copy) NSString *pageId;
 @end
 
 NS_ASSUME_NONNULL_END

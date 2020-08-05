@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) UIView *footerView;
 //底部按钮
 @property(nonatomic, strong) UIButton *comment;
+@property(nonatomic, strong) UILabel *commentNum;
 @property(nonatomic, strong) UIButton *like;
 
 @end

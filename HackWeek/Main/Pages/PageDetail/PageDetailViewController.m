@@ -29,6 +29,7 @@ NSString *detailreusecell = @"detailreusecell";
 #pragma mark - SEL
 -(void)post{
     PostNewCommentTableViewController *controller = PostNewCommentTableViewController.new;
+    controller.pageId = self.pageId;
     [self presentViewController:controller animated:YES completion:nil];
 }
 
@@ -40,7 +41,7 @@ NSString *detailreusecell = @"detailreusecell";
         make.left.and.right.and.bottom.equalTo(self.view);
         make.top.equalTo(self.view.mas_bottom).with.offset(-80);
     }];
-    _footerView.backgroundColor = [self colorWithHexString:@"#B3B3B3"];
+    _footerView.backgroundColor = [self colorWithHexString:@"#435b5c"];
     
     _comment = [UIButton buttonWithType:UIButtonTypeCustom];
     [_comment setImage:[UIImage imageNamed:@"评论"] forState:UIControlStateNormal];
@@ -48,7 +49,25 @@ NSString *detailreusecell = @"detailreusecell";
     [_footerView addSubview:_comment];
     [_comment mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(_footerView);
-        make.left.equalTo(_footerView).with.offset(20);
+        make.left.equalTo(_footerView).with.offset(100);
+    }];
+    _commentNum = UILabel.new;
+    [_footerView addSubview:_commentNum];
+    [_commentNum mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.comment.mas_right).with.offset(10);
+        make.centerY.equalTo(self.comment);
+    }];
+    _commentNum.textColor = UIColor.whiteColor;
+    _commentNum.font = [UIFont systemFontOfSize:20];
+    
+    
+    _like = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_like setImage:[UIImage imageNamed:@"赞"] forState:UIControlStateNormal];
+//    [_like addTarget:self action:@selector(post) forControlEvents:UIControlEventTouchUpInside];
+    [_footerView addSubview:_like];
+    [_like mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(_footerView);
+        make.right.equalTo(_footerView).with.offset(-100);
     }];
 }
 
@@ -75,6 +94,7 @@ NSString *detailreusecell = @"detailreusecell";
     [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"拉取帖子详细信息成功");
         self.pageDetailDict = [responseObject valueForKey:@"data"];
+
         dispatch_semaphore_signal(semaphore);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"拉取帖子详细信息失败");
@@ -82,6 +102,8 @@ NSString *detailreusecell = @"detailreusecell";
     }];
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     NSLog(@"the pageDetailDict: %@",self.pageDetailDict);
+    NSArray *length = [self.pageDetailDict valueForKey:@"reply"];
+    _commentNum.text = [NSString stringWithFormat:@"%lu",(unsigned long)length.count];
 }
 #pragma mark - UITableViewDataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

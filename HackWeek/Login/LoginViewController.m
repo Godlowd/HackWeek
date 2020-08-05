@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.delegate = self;
     [self.view setBackgroundColor: [self colorWithHexString:@"435b5c"]]; /* white */
     [self containerInit];
     [self titleInit];
@@ -81,6 +82,7 @@
             UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:page];
             page.tabBarItem.image = [UIImage imageNamed:@"首页"];
             [controller addChildViewController:page];
+//            [self.navigationController pushViewController:controller animated:YES];
             [self presentViewController:controller animated:YES completion:nil];
 
             

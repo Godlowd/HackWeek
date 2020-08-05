@@ -8,6 +8,8 @@
 
 #import "PostNewCommentTableViewController.h"
 #import <Masonry.h>
+#import "UserInfo.h"
+#import <AFNetworking.h>
 #define IMG_WIDTH 100
 #define IMG_HEIGHT IMG_WIDTH
 @interface PostNewCommentTableViewController ()
@@ -30,11 +32,31 @@ NSString *postnewcommentcell = @"postnewcommentcell";
     [_postPage setTitle:@"发布" forState:UIControlStateNormal];
     [_postPage setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:postnewcommentcell];
+    [_postPage addTarget:self action:@selector(postnewcomment) forControlEvents:UIControlEventTouchUpInside];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+# pragma mark - SEL
+-(void)postnewcomment{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue: [NSString stringWithFormat:@"Bearer %@", [UserInfo shareInstance].token] forHTTPHeaderField:@"Authorization"];
+    NSString *content = _text.text;
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    NSString *url = @"http://s1.996404.xyz:3000/api/v1/post/";
+    url = [NSString stringWithFormat:@"%@%@",url,self.pageId];
+    [manager POST:url parameters:@{ @"content":content} progress:^(NSProgress * _Nonnull uploadProgress) {
+
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"回复帖子成功");
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"回复帖子失败");
+        NSLog(@"the url is %@", url);
+    }];
 }
 
 -(void)cancelPost{
@@ -88,14 +110,14 @@ NSString *postnewcommentcell = @"postnewcommentcell";
             for (UIView *subview in cell.subviews) {
                 [subview removeFromSuperview];
             }
-            UITextView *text = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 30)];;
-            text.backgroundColor = UIColor.whiteColor;
-            text.delegate = self;
-            text.text = @"说些什么呢";
-            [cell addSubview:text];
-            text.font = [UIFont systemFontOfSize:20];
-            text.scrollEnabled = false;
-            [text mas_makeConstraints:^(MASConstraintMaker *make) {
+            _text = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 30)];;
+            _text.backgroundColor = UIColor.whiteColor;
+            _text.delegate = self;
+            _text.text = @"说些什么呢";
+            [cell addSubview:_text];
+            _text.font = [UIFont systemFontOfSize:20];
+            _text.scrollEnabled = false;
+            [_text mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.equalTo(cell.mas_left).with.offset(52);
                 make.right.equalTo(cell.mas_right).with.offset(-52);
                 make.top.equalTo(cell);
@@ -104,8 +126,8 @@ NSString *postnewcommentcell = @"postnewcommentcell";
             self.customimageview = [[CustomImageVIew alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 50)];
             [cell addSubview:self.customimageview];
             [self.customimageview mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(text.mas_bottom);
-                make.left.and.right.equalTo(text);
+                make.top.equalTo(_text.mas_bottom);
+                make.left.and.right.equalTo(_text);
                 make.bottom.equalTo(cell);
                 make.height.mas_greaterThanOrEqualTo(124);
             }];

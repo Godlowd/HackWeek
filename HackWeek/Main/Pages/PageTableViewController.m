@@ -80,7 +80,7 @@ NSString *pageCell = @"pageCell";
     NSDictionary *dict = _pages[indexPath.row];
     controller.pageId = [dict valueForKey:@"_id"];
 //    controller.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self.navigationController pushViewController:controller animated:YES];
+    [self presentViewController:controller animated:YES completion:nil];
 //    [self.navigationController pushViewController:controller animated:YES];
     
 }
@@ -94,7 +94,7 @@ NSString *pageCell = @"pageCell";
 
     return self.pages.count;
 }
-# pragma mark Init
+# pragma mark - Init
 -(void)containerInit{
     _container = [[UIView alloc] initWithFrame:UIScreen.mainScreen.bounds];
     [self.view addSubview:_container];
