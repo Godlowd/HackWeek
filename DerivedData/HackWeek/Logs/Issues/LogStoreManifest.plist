@@ -6,6 +6,90 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>22B62ED9-1B95-44BD-A279-E2448820FB42</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>22B62ED9-1B95-44BD-A279-E2448820FB42.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>HackWeek-gzttzkaoutemlkhboojthdweuate</string>
+			<key>timeStartedRecording</key>
+			<real>618361433.14736903</real>
+			<key>timeStoppedRecording</key>
+			<real>618361433.256212</real>
+			<key>title</key>
+			<string>Build target HackWeek</string>
+			<key>uniqueIdentifier</key>
+			<string>22B62ED9-1B95-44BD-A279-E2448820FB42</string>
+		</dict>
+		<key>28EC5261-CB50-4D57-8C11-90CE3D6AE8F4</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<key>fileName</key>
+			<string>28EC5261-CB50-4D57-8C11-90CE3D6AE8F4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>AFNetworking-dreajtgqbfcwnkhbbwfvgvlbtfyg</string>
+			<key>timeStartedRecording</key>
+			<real>618361433.258389</real>
+			<key>timeStoppedRecording</key>
+			<real>618361433.25852299</real>
+			<key>title</key>
+			<string>Build target AFNetworking</string>
+			<key>uniqueIdentifier</key>
+			<string>28EC5261-CB50-4D57-8C11-90CE3D6AE8F4</string>
+		</dict>
+		<key>37037387-F53C-4DA0-926A-D2774D545F96</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<key>fileName</key>
+			<string>37037387-F53C-4DA0-926A-D2774D545F96.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>WMPageController-dreajtgqbfcwnkhbbwfvgvlbtfyg</string>
+			<key>timeStartedRecording</key>
+			<real>618361433.25875795</real>
+			<key>timeStoppedRecording</key>
+			<real>618361433.25888801</real>
+			<key>title</key>
+			<string>Build target WMPageController</string>
+			<key>uniqueIdentifier</key>
+			<string>37037387-F53C-4DA0-926A-D2774D545F96</string>
+		</dict>
 		<key>BA6E34F3-3124-4F10-8FA1-79301E571340</key>
 		<dict>
 			<key>className</key>
@@ -34,7 +118,7 @@
 			<key>uniqueIdentifier</key>
 			<string>BA6E34F3-3124-4F10-8FA1-79301E571340</string>
 		</dict>
-		<key>DE4D1BFA-9F69-41C7-9485-582E1D5D053C</key>
+		<key>EFCAC052-0063-4DB7-88F5-AB4C7D7BF591</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -43,63 +127,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
 			<key>fileName</key>
-			<string>DE4D1BFA-9F69-41C7-9485-582E1D5D053C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>WMPageController-dreajtgqbfcwnkhbbwfvgvlbtfyg</string>
-			<key>timeStartedRecording</key>
-			<real>618360337.90250599</real>
-			<key>timeStoppedRecording</key>
-			<real>618360337.90258503</real>
-			<key>title</key>
-			<string>Build target WMPageController</string>
-			<key>uniqueIdentifier</key>
-			<string>DE4D1BFA-9F69-41C7-9485-582E1D5D053C</string>
-		</dict>
-		<key>DF0D245A-9D4B-4112-A2D4-B7C74F5C79C5</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
-			<key>fileName</key>
-			<string>DF0D245A-9D4B-4112-A2D4-B7C74F5C79C5.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>AFNetworking-dreajtgqbfcwnkhbbwfvgvlbtfyg</string>
-			<key>timeStartedRecording</key>
-			<real>618360337.90233803</real>
-			<key>timeStoppedRecording</key>
-			<real>618360337.90241897</real>
-			<key>title</key>
-			<string>Build target AFNetworking</string>
-			<key>uniqueIdentifier</key>
-			<string>DF0D245A-9D4B-4112-A2D4-B7C74F5C79C5</string>
-		</dict>
-		<key>E91D4E12-0886-47DE-8304-E5B159949CD8</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
-			<key>fileName</key>
-			<string>E91D4E12-0886-47DE-8304-E5B159949CD8.xcactivitylog</string>
+			<string>EFCAC052-0063-4DB7-88F5-AB4C7D7BF591.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -110,41 +138,13 @@
 			<key>signature</key>
 			<string>Masonry-dreajtgqbfcwnkhbbwfvgvlbtfyg</string>
 			<key>timeStartedRecording</key>
-			<real>618360337.90209997</real>
+			<real>618361433.25902796</real>
 			<key>timeStoppedRecording</key>
-			<real>618360337.90224504</real>
+			<real>618361433.25914299</real>
 			<key>title</key>
 			<string>Build target Masonry</string>
 			<key>uniqueIdentifier</key>
-			<string>E91D4E12-0886-47DE-8304-E5B159949CD8</string>
-		</dict>
-		<key>EA28FDBF-E073-471F-88D4-6C5B5CF4FC2F</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>EA28FDBF-E073-471F-88D4-6C5B5CF4FC2F.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>HackWeek-gzttzkaoutemlkhboojthdweuate</string>
-			<key>timeStartedRecording</key>
-			<real>618360337.57392704</real>
-			<key>timeStoppedRecording</key>
-			<real>618360337.90049696</real>
-			<key>title</key>
-			<string>Build target HackWeek</string>
-			<key>uniqueIdentifier</key>
-			<string>EA28FDBF-E073-471F-88D4-6C5B5CF4FC2F</string>
+			<string>EFCAC052-0063-4DB7-88F5-AB4C7D7BF591</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

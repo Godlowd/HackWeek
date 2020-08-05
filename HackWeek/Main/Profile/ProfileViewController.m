@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.imageArray = NSMutableArray.new;
     self.view.backgroundColor = UIColor.whiteColor;
     [self navBarInit];
     [self backgroundInit];
@@ -34,7 +35,6 @@
     [self.view addSubview:self.picture];
     [self.picture mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.profile.mas_bottom).with.offset(50);
-        make.bottom.mas_greaterThanOrEqualTo(self.view).with.offset(80);
         make.left.equalTo(self.view).with.offset(30);
         make.right.equalTo(self.view).with.offset(-30);
         make.height.mas_greaterThanOrEqualTo(124);
@@ -169,7 +169,6 @@
 #pragma mark - UIImagePickerControllerDelegate
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info{
     UIImage *pickImage = info[UIImagePickerControllerOriginalImage];
-    UIImageView *rview = [[UIImageView alloc] initWithImage:pickImage];
 
             UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, IMG_WIDTH, IMG_WIDTH)];
             view.clipsToBounds = YES;
@@ -199,6 +198,8 @@
 //            [self.tableView endUpdates];
 //
 //            [self.tableView layoutIfNeeded];
+    
+    [self.view layoutSubviews];
         
     
     [picker dismissViewControllerAnimated:YES completion:nil];
