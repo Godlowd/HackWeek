@@ -79,7 +79,7 @@ NSString *pageCell = @"pageCell";
     PageDetailViewController *controller = PageDetailViewController.new;
     NSDictionary *dict = _pages[indexPath.row];
     controller.pageId = [dict valueForKey:@"_id"];
-//    controller.modalPresentationStyle = UIModalPresentationFullScreen;
+    controller.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:controller animated:YES completion:nil];
 //    [self.navigationController pushViewController:controller animated:YES];
     

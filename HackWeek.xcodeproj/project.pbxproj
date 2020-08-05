@@ -29,8 +29,9 @@
 		D5AAF98924D4135900B6AF2E /* PageDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF98824D4135900B6AF2E /* PageDetailTableViewCell.m */; };
 		D5AAF98F24D5185300B6AF2E /* PostNewCommentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF98E24D5185300B6AF2E /* PostNewCommentTableViewController.m */; };
 		D5AAF99224D56CD300B6AF2E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF99124D56CD300B6AF2E /* BaseViewController.m */; };
-		D5AAF99624D56D2500B6AF2E /* PrivateChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF99524D56D2500B6AF2E /* PrivateChatViewController.m */; };
 		D5AAF99924D56FE000B6AF2E /* PrivateChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF99824D56FE000B6AF2E /* PrivateChatTableViewCell.m */; };
+		D5AAF9CD24DB171E00B6AF2E /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF9CC24DB171E00B6AF2E /* CommentTableViewCell.m */; };
+		D5AAF9D324DB1C6700B6AF2E /* LikeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF9D224DB1C6700B6AF2E /* LikeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,10 +76,12 @@
 		D5AAF98E24D5185300B6AF2E /* PostNewCommentTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostNewCommentTableViewController.m; sourceTree = "<group>"; };
 		D5AAF99024D56CD300B6AF2E /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D5AAF99124D56CD300B6AF2E /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		D5AAF99424D56D2500B6AF2E /* PrivateChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateChatViewController.h; sourceTree = "<group>"; };
-		D5AAF99524D56D2500B6AF2E /* PrivateChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivateChatViewController.m; sourceTree = "<group>"; };
 		D5AAF99724D56FE000B6AF2E /* PrivateChatTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateChatTableViewCell.h; sourceTree = "<group>"; };
 		D5AAF99824D56FE000B6AF2E /* PrivateChatTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivateChatTableViewCell.m; sourceTree = "<group>"; };
+		D5AAF9CB24DB171E00B6AF2E /* CommentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		D5AAF9CC24DB171E00B6AF2E /* CommentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		D5AAF9D124DB1C6700B6AF2E /* LikeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LikeTableViewCell.h; sourceTree = "<group>"; };
+		D5AAF9D224DB1C6700B6AF2E /* LikeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LikeTableViewCell.m; sourceTree = "<group>"; };
 		E2E7958D7D4438D5297D7765 /* libPods-HackWeek.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackWeek.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -192,6 +195,8 @@
 		D5AAF91D24D0F84200B6AF2E /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				D5AAF9C724DB154000B6AF2E /* Comment */,
+				D5AAF9C624DB153200B6AF2E /* Like */,
 				D5AAF99324D56D0600B6AF2E /* PrivateChat */,
 				D5AAF99024D56CD300B6AF2E /* BaseViewController.h */,
 				D5AAF99124D56CD300B6AF2E /* BaseViewController.m */,
@@ -266,12 +271,28 @@
 		D5AAF99324D56D0600B6AF2E /* PrivateChat */ = {
 			isa = PBXGroup;
 			children = (
-				D5AAF99424D56D2500B6AF2E /* PrivateChatViewController.h */,
-				D5AAF99524D56D2500B6AF2E /* PrivateChatViewController.m */,
 				D5AAF99724D56FE000B6AF2E /* PrivateChatTableViewCell.h */,
 				D5AAF99824D56FE000B6AF2E /* PrivateChatTableViewCell.m */,
 			);
 			path = PrivateChat;
+			sourceTree = "<group>";
+		};
+		D5AAF9C624DB153200B6AF2E /* Like */ = {
+			isa = PBXGroup;
+			children = (
+				D5AAF9D124DB1C6700B6AF2E /* LikeTableViewCell.h */,
+				D5AAF9D224DB1C6700B6AF2E /* LikeTableViewCell.m */,
+			);
+			path = Like;
+			sourceTree = "<group>";
+		};
+		D5AAF9C724DB154000B6AF2E /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				D5AAF9CB24DB171E00B6AF2E /* CommentTableViewCell.h */,
+				D5AAF9CC24DB171E00B6AF2E /* CommentTableViewCell.m */,
+			);
+			path = Comment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,7 +398,6 @@
 				D5AAF98624D40B7900B6AF2E /* PageDetailViewController.m in Sources */,
 				D5AAF90324CEAA8000B6AF2E /* HackWeek.xcdatamodeld in Sources */,
 				D5AAF92424D1282B00B6AF2E /* PageTableViewController.m in Sources */,
-				D5AAF99624D56D2500B6AF2E /* PrivateChatViewController.m in Sources */,
 				D5AAF92124D0F86300B6AF2E /* PageTableViewCell.m in Sources */,
 				D5AAF98924D4135900B6AF2E /* PageDetailTableViewCell.m in Sources */,
 				D5AAF91424CEAAA500B6AF2E /* LoginViewController.m in Sources */,
@@ -386,9 +406,11 @@
 				D5AAF8F724CEAA8000B6AF2E /* AppDelegate.m in Sources */,
 				D5AAF92824D16CD700B6AF2E /* UserInfo.m in Sources */,
 				D5AAF99924D56FE000B6AF2E /* PrivateChatTableViewCell.m in Sources */,
+				D5AAF9CD24DB171E00B6AF2E /* CommentTableViewCell.m in Sources */,
 				D5AAF92C24D16F4D00B6AF2E /* CustomTabbarViewController.m in Sources */,
 				D5AAF8FA24CEAA8000B6AF2E /* SceneDelegate.m in Sources */,
 				D5AAF98F24D5185300B6AF2E /* PostNewCommentTableViewController.m in Sources */,
+				D5AAF9D324DB1C6700B6AF2E /* LikeTableViewCell.m in Sources */,
 				D5AAF91B24D05AAA00B6AF2E /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

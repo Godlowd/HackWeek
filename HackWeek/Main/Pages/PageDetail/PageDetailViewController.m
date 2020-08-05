@@ -20,6 +20,7 @@
 NSString *detailreusecell = @"detailreusecell";
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self navBarInit];
     [self tableViewInit];
     [self footerInit];
     
@@ -27,6 +28,9 @@ NSString *detailreusecell = @"detailreusecell";
     // Do any additional setup after loading the view.
 }
 #pragma mark - SEL
+-(void)backToPage{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 -(void)post{
     PostNewCommentTableViewController *controller = PostNewCommentTableViewController.new;
     controller.pageId = self.pageId;
@@ -34,6 +38,28 @@ NSString *detailreusecell = @"detailreusecell";
 }
 
 #pragma mark - Init
+-(void)navBarInit{
+    _navbar = UIView.new;
+    [self.view addSubview:_navbar];
+    [_navbar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.equalTo(self.view);
+        make.height.mas_equalTo(84);
+    }];
+    _navbar.backgroundColor = [self colorWithHexString:@"f0f0f0"];
+    
+    _backBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIImage *img = [UIImage imageNamed:@"返回"];
+    img = [self scaleImg:img withSize:CGSizeMake(30, 28)];
+    [_backBtn setImage:img forState:UIControlStateNormal];
+//    _backBtn setcolo
+    [_backBtn addTarget:self action:@selector(backToPage) forControlEvents:UIControlEventTouchUpInside];
+    
+    [_navbar addSubview:_backBtn];
+    [_backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.navbar).with.offset(20);
+        make.bottom.equalTo(self.navbar);
+    }];
+}
 -(void)footerInit{
     _footerView = UIView.new;
     [self.view addSubview:_footerView];
@@ -41,7 +67,7 @@ NSString *detailreusecell = @"detailreusecell";
         make.left.and.right.and.bottom.equalTo(self.view);
         make.top.equalTo(self.view.mas_bottom).with.offset(-80);
     }];
-    _footerView.backgroundColor = [self colorWithHexString:@"#435b5c"];
+    _footerView.backgroundColor = [self colorWithHexString:@"435b5c"];
     
     _comment = [UIButton buttonWithType:UIButtonTypeCustom];
     [_comment setImage:[UIImage imageNamed:@"评论"] forState:UIControlStateNormal];
@@ -75,12 +101,15 @@ NSString *detailreusecell = @"detailreusecell";
     self.tableView = UITableView.new;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
+        make.top.equalTo(self.navbar.mas_bottom);
+        make.left.right.equalTo(self.view);
+        make.bottom.equalTo(self.view).with.offset(-80);
     }];
     [self.tableView registerClass:PageDetailTableViewCell.class forCellReuseIdentifier:detailreusecell];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = UIView.new;
+    self.tableView.tableFooterView.backgroundColor = [self colorWithHexString:@"f0f0f0"];
 }
 -(void)viewWillAppear:(BOOL)animated{
     self.pageDetailDict = NSDictionary.new;
@@ -115,7 +144,14 @@ NSString *detailreusecell = @"detailreusecell";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     PageDetailTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:detailreusecell forIndexPath:indexPath];
     if (indexPath.row == 0) {
-        
+        [cell initAvatarTimeNameTitleContent];
+        cell.avatar.image = [UIImage imageNamed:@"白色头像"];
+        cell.time.text = [NSString stringWithFormat:@"%@",[_pageDetailDict valueForKey:@"created_at"]];
+        cell.title.text = [_pageDetailDict valueForKey:@"title"];
+        cell.title.font = [UIFont systemFontOfSize:20];
+        cell.title.textColor = [self colorWithHexString:@"9B724B"];
+        cell.content.text = [_pageDetailDict valueForKey:@"content"];
+        cell.backgroundColor = [self colorWithHexString:@"f0f0f0"];
     }
     else{
         [cell initAvatarTimeNameContent];
@@ -123,7 +159,8 @@ NSString *detailreusecell = @"detailreusecell";
         NSDictionary *dict = [_pageDetailDict valueForKey:@"reply"][indexPath.row-1];
         cell.time.text = [NSString stringWithFormat:@"%@",[dict valueForKey:@"updated_at"]];
         cell.content.text = [dict valueForKey:@"content"];
-        [cell addSubview:cell.content];
+//        [cell addSubview:cell.content];
+        cell.backgroundColor = [self colorWithHexString:@"f0f0f0"];
 //        [cell.content mas_makeConstraints:^(MASConstraintMaker *make) {
 //            make.left.equalTo(cell.avatar.mas_right).with.offset(21);
 //            make.top.equalTo(cell.time.mas_bottom).with.offset(10);
@@ -192,6 +229,15 @@ NSString *detailreusecell = @"detailreusecell";
                            green:((float) g / 255.0f)
                             blue:((float) b / 255.0f)
                            alpha:1.0f];
+}
+# pragma mark - scale image
+-(UIImage *)scaleImg:(UIImage *)img withSize:(CGSize) wannaSize{
+    UIImage *orignialImg = img;
+    UIGraphicsBeginImageContextWithOptions(wannaSize, false, 0);
+    [orignialImg drawInRect:CGRectMake(0, 0, wannaSize.width, wannaSize.height)];
+    UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImg;
 }
 /*
 #pragma mark - Navigation

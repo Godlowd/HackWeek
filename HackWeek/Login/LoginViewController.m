@@ -15,6 +15,7 @@
 #import "UserInfo.h"
 #import "CustomTabbarViewController.h"
 #import "SceneDelegate.h"
+#import "BaseViewController.h"
 @interface LoginViewController ()
 
 @end
@@ -79,9 +80,12 @@
             controller.modalPresentationStyle = UIModalPresentationFullScreen;
             controller.delegate = controller;
             PageTableViewController *page = PageTableViewController.new;
+            BaseViewController *base = BaseViewController.new;
             UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:page];
             page.tabBarItem.image = [UIImage imageNamed:@"首页"];
+            base.tabBarItem.image = [UIImage imageNamed:@"消息"];
             [controller addChildViewController:page];
+            [controller addChildViewController:base];
 //            [self.navigationController pushViewController:controller animated:YES];
             [self presentViewController:controller animated:YES completion:nil];
 
@@ -238,7 +242,7 @@
 
 
 
-# pragma mark set Color
+# pragma mark - set Color
 -(UIColor*)colorWithHexString:(NSString*)hex
 {
     NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];

@@ -14,10 +14,15 @@
 @end
 
 @implementation PrivateChatViewController
-NSString *privatechat = @"privatechat";
+NSString *privatecha = @"privatecha";
+
+-(instancetype)init{
+    self  = [super init];
+    [self tableViewInit];
+    return  self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self tableViewInit];
     // Do any additional setup after loading the view.
 }
 #pragma mark - UITableViewDelegate
@@ -35,26 +40,26 @@ NSString *privatechat = @"privatechat";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    PrivateChatTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:privatechat];
+    PrivateChatTableViewCell *cell = [self.privateChatTableView dequeueReusableCellWithIdentifier:privatecha];
 
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.privateChatTableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 #pragma mark - Init
 -(void)tableViewInit{
-    _tableView = UITableView.new;
-    [self.view addSubview:_tableView];
-    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    _privateChatTableView = UITableView.new;
+    [self.view addSubview:_privateChatTableView];
+    [_privateChatTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.tableView registerClass:PrivateChatTableViewCell.class forCellReuseIdentifier:privatechat];
-    self.tableView.tableFooterView = UIView.new;
+    self.privateChatTableView.delegate = self;
+    self.privateChatTableView.dataSource = self;
+    [self.privateChatTableView registerClass:PrivateChatTableViewCell.class forCellReuseIdentifier:privatecha];
+    self.privateChatTableView.tableFooterView = UIView.new;
 }
 /*
 #pragma mark - Navigation

@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PageDetailViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, strong) UITableView *tableView;
+//顶部bar
+@property(nonatomic, strong) UIView *navbar;
+@property(nonatomic, strong) UIButton *backBtn;
 //帖子id
 @property(nonatomic, strong) NSString *pageId;
 //帖子内容
