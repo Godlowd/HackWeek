@@ -24,6 +24,7 @@ NSString *pageCell = @"pageCell";
 -(void)viewWillAppear:(BOOL)animated{
     self.pages = NSMutableArray.new;
     [self fetchPage];
+    [self.pageView reloadData];
     NSLog(@"the dict is %@", self.pages);
 }
 
@@ -78,8 +79,8 @@ NSString *pageCell = @"pageCell";
     PageDetailViewController *controller = PageDetailViewController.new;
     NSDictionary *dict = _pages[indexPath.row];
     controller.pageId = [dict valueForKey:@"_id"];
-    controller.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:controller animated:YES completion:nil];
+//    controller.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self.navigationController pushViewController:controller animated:YES];
 //    [self.navigationController pushViewController:controller animated:YES];
     
 }

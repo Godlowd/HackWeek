@@ -35,23 +35,8 @@
 }
 # pragma mark click
 -(void)registerUser{
-//    UITextField *setPassword = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 80, 10)];
-//    NSMutableAttributedString *placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请输入密码" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:20]}];
-//    setPassword.attributedPlaceholder = placeholderString;
-//    [self.containerView addSubview:setPassword];
-//    [setPassword mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.containerView).with.offset(30);
-//        make.right.equalTo(self.containerView).with.offset(-30);
-//        make.top.equalTo(self.password.mas_bottom).with.offset(-30);
-////        make.bottom.equalTo(self.containerView).with.offset(-30);
-//    }];
-    PageTableViewController *page = PageTableViewController.new;
-
     RegisterViewController *controller = RegisterViewController.new;
-    
-     UITabBarController *tabbar = [[UITabBarController alloc] init];
-    
-    [self presentViewController:tabbar animated:YES completion:nil];
+    [self presentViewController:controller animated:YES completion:nil];
     
 }
 
@@ -93,6 +78,7 @@
             controller.modalPresentationStyle = UIModalPresentationFullScreen;
             controller.delegate = controller;
             PageTableViewController *page = PageTableViewController.new;
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:page];
             page.tabBarItem.image = [UIImage imageNamed:@"首页"];
             [controller addChildViewController:page];
             [self presentViewController:controller animated:YES completion:nil];
@@ -106,13 +92,6 @@
         
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     });
-    
-        
-    
-
-
-    
-
     
 }
 
@@ -169,6 +148,7 @@
     _password.clearButtonMode = UITextFieldViewModeWhileEditing;
     _password.secureTextEntry = YES;
     NSMutableAttributedString *placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请输入密码" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}];
+    _password.textContentType = UITextContentTypeOneTimeCode;
    _password.attributedPlaceholder = placeholderString;
 
     _password.layer.borderWidth = 1;

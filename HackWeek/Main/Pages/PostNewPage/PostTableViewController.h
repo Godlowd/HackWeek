@@ -10,7 +10,7 @@
 #import "CustomImageVIew.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PostTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate,UIImagePickerControllerDelegate>
+@interface PostTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate,UIImagePickerControllerDelegate,UIGestureRecognizerDelegate>
 @property(nonatomic, strong) UIButton *postPage;
 @property(nonatomic, strong) UIButton *cancel;
 @property(nonatomic, strong) UIButton *setting;
@@ -21,6 +21,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) UISwitch *anonmous;
 @property(nonatomic, strong) UIView *bottom;
+@property(nonatomic, strong) UITextView *pageContent;
+@property(nonatomic, strong) UITextField *pageTitle;
+//底部匿名部分
+@property(nonatomic, strong) UIView *container;
+@property(nonatomic, strong) UIView *whetheranonymous;
+@property(nonatomic, strong) UIView *blankview;
+@property(nonatomic) BOOL *whetherHide;
 @end
 
 NS_ASSUME_NONNULL_END

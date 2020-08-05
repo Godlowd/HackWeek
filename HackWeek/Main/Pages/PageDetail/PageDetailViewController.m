@@ -131,6 +131,10 @@ NSString *detailreusecell = @"detailreusecell";
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 # pragma mark set Color
 -(UIColor*)colorWithHexString:(NSString*)hex
 {
