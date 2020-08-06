@@ -151,13 +151,14 @@ NSString *pageCell = @"pageCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:pageCell forIndexPath:indexPath];
-    
+    cell.backgroundColor = [self colorWithHexString:@"f0f0f0"];
     for (UIView *subview in cell.subviews) {
         [subview removeFromSuperview];
     }
     NSDictionary *dict = _pages[indexPath.row];
     [cell initAvatarTitleContentTime];
     cell.title.text = [dict valueForKey:@"title"];
+    cell.title.textColor = [self colorWithHexString:@"9B724B"];
     cell.content.text = [dict valueForKey:@"content"];
     cell.time.text = [self getDateStringWithTimeStr:[dict valueForKey:@"created_at"]];
     

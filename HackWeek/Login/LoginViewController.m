@@ -43,6 +43,9 @@
     
 }
 
+- (void)dismiss:(UIAlertController *)alert{
+    [alert dismissViewControllerAnimated:YES completion:nil];
+}
 -(void)byVerify{
     NSMutableAttributedString *placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请输入验证码" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:20]}];
     _password.attributedPlaceholder = placeholderString;
@@ -72,6 +75,11 @@
         [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSLog(@"请求成功");
+            
+//            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"登录成功！" preferredStyle:UIAlertControllerStyleAlert];
+//             [self presentViewController:alert animated:YES completion:nil];
+//            //控制提示框显示的时间为2秒
+//             [self performSelector:@selector(dismiss:) withObject:alert afterDelay:2.0];
             
             dispatch_semaphore_signal(semaphore);
             [UserInfo shareInstance].token = [[responseObject valueForKey:@"data"] valueForKey:@"token"];

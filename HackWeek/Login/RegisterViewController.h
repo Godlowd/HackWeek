@@ -22,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) UIButton *registerBtn;
 
 @property(nonatomic) BOOL *whetherregistersuccessfully;
+
+@property(nonatomic, strong) NSTimer *labelTimer;
+@property(nonatomic, strong) NSTimer *btnTimer;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -13,9 +13,12 @@
 @end
 
 @implementation SettingTableViewController
-
+NSString *settableviewreusecell = @"settableviewreusecell";
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _array = @[@"绑定其他账户",@"消息推送设置",@"发帖设置",@"私信设置",@"主页权限",@"黑名单",@"退出登录"];
+    self.tableView.tableFooterView = UIView.new;
+    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:settableviewreusecell];
     self.tableView.tableFooterView = UIView.new;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -27,15 +30,21 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _array.count;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+#pragma mark - UItableviewdelegate
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:settableviewreusecell];
+    cell.textLabel.text = _array[indexPath.row];
+    return  cell;
+}
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];

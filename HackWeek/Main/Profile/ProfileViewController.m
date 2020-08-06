@@ -123,7 +123,6 @@
 
 -(void)showSetting{
     SettingTableViewController *vc = SettingTableViewController.new;
-    vc.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:vc animated:YES completion:nil];
 }
 

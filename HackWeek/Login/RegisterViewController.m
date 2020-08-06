@@ -36,6 +36,10 @@ NSString *userId = @"";
         
     }];
 }
+-(void)enableGetCodeBtn{
+    self.getVerifyCode.userInteractionEnabled = true;
+    [self.getVerifyCode setTitle:@"重新获取验证码" forState:UIControlStateNormal];
+}
 
 -(void)getCode{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -49,12 +53,31 @@ NSString *userId = @"";
          [self presentViewController:alert animated:YES completion:nil];
         //控制提示框显示的时间为2秒
          [self performSelector:@selector(dismiss:) withObject:alert afterDelay:2.0];
-        
+        self.getVerifyCode.userInteractionEnabled = false;
+        self.btnTimer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(enableGetCodeBtn) userInfo:nil repeats:NO];
+        self.labelTimer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+            static int num = 60;
+            num--;
+            if (num == 0) {
+                num = 60;
+                [self.getVerifyCode setTitle:@"重新获取验证码" forState:UIControlStateNormal];
+                [self.getVerifyCode setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+                [timer invalidate];
+            }else{
+                [self.getVerifyCode setTitle:[NSString stringWithFormat:@"重新获取验证码(%d)",num] forState:UIControlStateNormal];
+                [self.getVerifyCode setTitleColor:UIColor.grayColor forState:UIControlStateNormal];
+            }
+
+        }];
         [self.getVerifyCode setTitle:@"重新获取验证码" forState:UIControlStateNormal];
         userId = [[responseObject valueForKey:@"data"] valueForKey:@"_id"];
         NSLog(@"the user id is %@", userId);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"获取验证码失败");
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"验证码获取失败" preferredStyle:UIAlertControllerStyleAlert];
+         [self presentViewController:alert animated:YES completion:nil];
+        //控制提示框显示的时间为2秒
+         [self performSelector:@selector(dismiss:) withObject:alert afterDelay:2.0];
     }];
 }
 
@@ -127,7 +150,7 @@ NSString *userId = @"";
         make.width.mas_equalTo(256);
     }];
     _email.backgroundColor = [self colorWithHexString:@"f8f6f9"];
-    _email.font = [UIFont systemFontOfSize:25];
+    _email.font = [UIFont systemFontOfSize:18];
     _email.clearButtonMode = UITextFieldViewModeWhileEditing;
     _email.layer.borderColor = [UIColor.blackColor CGColor];
     _email.layer.borderWidth = 1;
@@ -145,7 +168,7 @@ NSString *userId = @"";
         make.height.mas_equalTo(50);
     }];
     _verifyCode.backgroundColor = [self colorWithHexString:@"f8f6f9"];
-    _verifyCode.font = [UIFont systemFontOfSize:25];
+    _verifyCode.font = [UIFont systemFontOfSize:18];
     _verifyCode.clearButtonMode = UITextFieldViewModeWhileEditing;
     _verifyCode.layer.cornerRadius = 5;
     placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请输入验证码" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}];
@@ -172,7 +195,7 @@ NSString *userId = @"";
         make.top.equalTo(self.getVerifyCode.mas_bottom).with.offset(80);
         make.height.mas_equalTo(50);
     }];
-    _paswword.font = [UIFont systemFontOfSize:25];
+    _paswword.font = [UIFont systemFontOfSize:18];
     _paswword.clearButtonMode = UITextFieldViewModeWhileEditing;
     _paswword.backgroundColor = [self colorWithHexString:@"f8f6f9"];
     placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请设置密码" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}];
@@ -188,7 +211,7 @@ NSString *userId = @"";
         make.top.equalTo(self.paswword.mas_bottom).with.offset(30);
         make.height.mas_equalTo(50);
     }];
-    _confirmPassword.font = [UIFont systemFontOfSize:25];
+    _confirmPassword.font = [UIFont systemFontOfSize:18];
     _confirmPassword.clearButtonMode = UITextFieldViewModeWhileEditing;
     _confirmPassword.backgroundColor = [self colorWithHexString:@"f8f6f9"];
     placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请重复密码" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}];

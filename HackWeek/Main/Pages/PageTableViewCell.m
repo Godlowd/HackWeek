@@ -23,6 +23,7 @@
 
 -(void)initAvatarTitleContentTime{
     _avatar = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 52, 52)];
+    _avatar.image = [UIImage imageNamed:@"白色头像"];
     [self addSubview:_avatar];
     [_avatar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).with.offset(20);

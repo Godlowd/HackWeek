@@ -143,6 +143,10 @@ NSString *detailreusecell = @"detailreusecell";
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     PageDetailTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:detailreusecell forIndexPath:indexPath];
+    for(UIView *subview in cell.subviews)
+        {
+        [subview removeFromSuperview];
+    }
     if (indexPath.row == 0) {
         [cell initAvatarTimeNameTitleContent];
         cell.avatar.image = [UIImage imageNamed:@"白色头像"];
