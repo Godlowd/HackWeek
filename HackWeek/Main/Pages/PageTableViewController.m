@@ -159,17 +159,18 @@ NSString *pageCell = @"pageCell";
     [cell initAvatarTitleContentTime];
     cell.title.text = [dict valueForKey:@"title"];
     cell.content.text = [dict valueForKey:@"content"];
-    cell.time.text = [self getDateStringWithTimeStr:[dict valueForKey:@"updated_at"]];
+    cell.time.text = [self getDateStringWithTimeStr:[dict valueForKey:@"created_at"]];
+    
     return cell;
 }
 
 // 时间戳转时间,时间戳为13位是精确到毫秒的，10位精确到秒
 - (NSString *)getDateStringWithTimeStr:(NSString *)str{
-    NSTimeInterval time=[str doubleValue]/1000;//传入的时间戳str如果是精确到毫秒的记得要/1000
+    NSTimeInterval time=[str doubleValue];//传入的时间戳str如果是精确到毫秒的记得要/1000
     NSDate *detailDate=[NSDate dateWithTimeIntervalSince1970:time];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; //实例化一个NSDateFormatter对象
     //设定时间格式,这里可以设置成自己需要的格式
-        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss SS"];
+        [dateFormatter setDateFormat:@"MM-dd HH:mm"];
     NSString *currentDateStr = [dateFormatter stringFromDate: detailDate];
     return currentDateStr;
 }

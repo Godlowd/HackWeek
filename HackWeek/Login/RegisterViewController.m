@@ -19,6 +19,7 @@ NSString *userId = @"";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.whetherregistersuccessfully = false;
     self.view.backgroundColor = UIColor.whiteColor;
     [self titleInit];
     [self textFieldInit];
@@ -27,6 +28,15 @@ NSString *userId = @"";
 }
 
 #pragma mark click
+- (void)dismiss:(UIAlertController *)alert{
+    [alert dismissViewControllerAnimated:YES completion:^{
+        if (self.whetherregistersuccessfully) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+        
+    }];
+}
+
 -(void)getCode{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -35,6 +45,11 @@ NSString *userId = @"";
     [manager POST:@"http://s1.996404.xyz:3000/api/v1/user/info" parameters:@{@"email": emailtext} progress:^(NSProgress * _Nonnull uploadProgress) {
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"验证码发送成功" preferredStyle:UIAlertControllerStyleAlert];
+         [self presentViewController:alert animated:YES completion:nil];
+        //控制提示框显示的时间为2秒
+         [self performSelector:@selector(dismiss:) withObject:alert afterDelay:2.0];
+        
         [self.getVerifyCode setTitle:@"重新获取验证码" forState:UIControlStateNormal];
         userId = [[responseObject valueForKey:@"data"] valueForKey:@"_id"];
         NSLog(@"the user id is %@", userId);
@@ -44,21 +59,37 @@ NSString *userId = @"";
 }
 
 -(void)registerAccount{
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    if([_confirmPassword.text isEqualToString:_paswword.text]){
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
 
-    NSString *code = _verifyCode.text;
-    NSString *password = _paswword.text;
-    NSLog(@"the password is %@", password);
-    NSLog(@"the code is %@", code);
-    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [manager POST:@"http://s1.996404.xyz:3000/api/v1/user/verify" parameters:@{@"code": code, @"password":password, @"_id" : userId} progress:^(NSProgress * _Nonnull uploadProgress) {
+        NSString *code = _verifyCode.text;
+        NSString *password = _paswword.text;
+        NSLog(@"the password is %@", password);
+        NSLog(@"the code is %@", code);
+        [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [manager POST:@"http://s1.996404.xyz:3000/api/v1/user/verify" parameters:@{@"code": code, @"password":password, @"_id" : userId} progress:^(NSProgress * _Nonnull uploadProgress) {
 
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"注册成功");
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"注册失败");
-    }];
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"注册成功，请返回登录页面登录" preferredStyle:UIAlertControllerStyleAlert];
+            self.whetherregistersuccessfully = true;
+             [self presentViewController:alert animated:YES completion:nil];
+            //控制提示框显示的时间为2秒
+             [self performSelector:@selector(dismiss:) withObject:alert afterDelay:2.0];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"注册失败" preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alert animated:YES completion:nil];
+            //控制提示框显示的时间为2秒
+             [self performSelector:@selector(dismiss:) withObject:alert afterDelay:2.0];
+        }];
+    }
+    else {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"两次密码不一致！请检查核对" preferredStyle:UIAlertControllerStyleAlert];
+         [self presentViewController:alert animated:YES completion:nil];
+        //控制提示框显示的时间为2秒
+         [self performSelector:@selector(dismiss:) withObject:alert afterDelay:2.0];
+    }
 }
 
 # pragma mark Init

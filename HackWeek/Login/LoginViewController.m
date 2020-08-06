@@ -131,12 +131,12 @@
     _account = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
     [self.containerView addSubview:_account];
     [_account mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.containerView).with.offset(30);
-        make.right.equalTo(self.containerView).with.offset(-30);
+        make.left.equalTo(self.containerView).with.offset(20);
+        make.right.equalTo(self.containerView).with.offset(-20);
         make.top.equalTo(self.loginByPassword.mas_bottom).with.offset(30);
         make.height.mas_equalTo(35);
     }];
-    _account.font = [UIFont systemFontOfSize:25];
+    _account.font = [UIFont systemFontOfSize:18];
     _account.clearButtonMode = UITextFieldViewModeWhileEditing;
 
     NSMutableAttributedString *placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请输入华中大邮箱" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}];
@@ -151,12 +151,12 @@
     _password = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
     [self.containerView addSubview:_password];
     [_password mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.containerView).with.offset(30);
-        make.right.equalTo(self.containerView).with.offset(-30);
+        make.left.equalTo(self.containerView).with.offset(20);
+        make.right.equalTo(self.containerView).with.offset(-20);
         make.top.equalTo(self.account.mas_bottom).with.offset(30);
         make.height.mas_equalTo(35);
     }];
-    _password.font = [UIFont fontWithName:@"Arial" size:25];
+    _password.font = [UIFont fontWithName:@"Arial" size:18];
     [_password setValue:[UIFont boldSystemFontOfSize:18] forKeyPath:@"placeholderLabel.font"];
     _password.clearButtonMode = UITextFieldViewModeWhileEditing;
     _password.secureTextEntry = YES;
@@ -219,12 +219,7 @@
         make.right.equalTo(self.containerView).with.offset(-40);
         make.height.mas_equalTo(20);
     }];
-//    NSArray *login = @[_loginByPassword, _loginByVerify];
-//    [login mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedItemLength:100 leadSpacing:40 tailSpacing:40];
-//    [login mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.containerView.mas_top).with.offset(46);
-//        make.bottom.equalTo(self.containerView.mas_bottom).with.offset(-257);
-//    }];
+
 }
 
 

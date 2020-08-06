@@ -109,7 +109,8 @@
         make.right.equalTo(self).with.offset(-30);
         make.bottom.equalTo(self.mas_bottom).with.offset(-50);
     }];
-    
+    self.content.lineBreakMode = NSLineBreakByWordWrapping;
+    self.content.numberOfLines = 0;
     
 }
 @end

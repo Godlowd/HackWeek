@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong) UIButton *getVerifyCode;
 @property(nonatomic, strong) UIButton *registerBtn;
+
+@property(nonatomic) BOOL *whetherregistersuccessfully;
 @end
 
 NS_ASSUME_NONNULL_END
