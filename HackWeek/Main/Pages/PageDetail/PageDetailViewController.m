@@ -149,7 +149,7 @@ NSString *detailreusecell = @"detailreusecell";
     }
     if (indexPath.row == 0) {
         [cell initAvatarTimeNameTitleContent];
-        cell.avatar.image = [UIImage imageNamed:@"白色头像"];
+//        cell.avatar.image = [UIImage imageNamed:@"白色头像"];
         cell.time.text = [NSString stringWithFormat:@"%@",[_pageDetailDict valueForKey:@"created_at"]];
         cell.title.text = [_pageDetailDict valueForKey:@"title"];
         cell.title.font = [UIFont systemFontOfSize:20];
@@ -159,7 +159,7 @@ NSString *detailreusecell = @"detailreusecell";
     }
     else{
         [cell initAvatarTimeNameContent];
-        cell.avatar.image = [UIImage imageNamed:@"白色头像"];
+//        cell.avatar.image = [UIImage imageNamed:@"白色头像"];
         NSDictionary *dict = [_pageDetailDict valueForKey:@"reply"][indexPath.row-1];
         cell.time.text = [NSString stringWithFormat:@"%@",[dict valueForKey:@"updated_at"]];
         cell.content.text = [dict valueForKey:@"content"];

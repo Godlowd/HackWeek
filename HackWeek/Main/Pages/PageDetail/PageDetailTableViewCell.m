@@ -19,6 +19,7 @@
 
 -(void)initAvatarTimeNameContent{
     self.avatar = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, AVATAR_WIDTH, AVATAR_HEIGHT)];
+    _avatar.image = [UIImage imageNamed:@"白色头像"];
     [self addSubview:self.avatar];
     [self.avatar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(34);
@@ -26,8 +27,8 @@
         make.height.mas_equalTo(AVATAR_HEIGHT);
         make.width.mas_equalTo(AVATAR_WIDTH);
     }];
-    self.avatar.layer.cornerRadius = 25;
-    self.avatar.clipsToBounds;
+    _avatar.layer.cornerRadius = 52/2;
+    _avatar.clipsToBounds = true;
     
     self.name = UILabel.new;
     self.name.text = @"(已匿名)";
@@ -67,6 +68,7 @@
 -(void)initAvatarTimeNameTitleContent{
     self.avatar = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, AVATAR_WIDTH, AVATAR_HEIGHT)];
     [self addSubview:self.avatar];
+    _avatar.image = [UIImage imageNamed:@"白色头像"];
     [self.avatar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(34);
         make.top.equalTo(self).with.offset(34);
